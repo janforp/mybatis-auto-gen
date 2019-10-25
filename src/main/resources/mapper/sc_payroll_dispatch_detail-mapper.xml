@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.ScPayrollDispatchDetailDAO">
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="app_id" property="appId" jdbcType="VARCHAR"/>
+        <result column="customer_id" property="customerId" jdbcType="BIGINT"/>
+        <result column="dept_id" property="deptId" jdbcType="INTEGER"/>
+        <result column="period" property="period" jdbcType="CHAR"/>
+        <result column="dispatch_id" property="dispatchId" jdbcType="INTEGER"/>
+        <result column="employee_id" property="employeeId" jdbcType="INTEGER"/>
+        <result column="payable_amount" property="payableAmount" jdbcType="DECIMAL"/>
+        <result column="actual_amount" property="actualAmount" jdbcType="DECIMAL"/>
+        <result column="is_viewed" property="isViewed" jdbcType="TINYINT"/>
+        <result column="view_date" property="viewDate" jdbcType="TIMESTAMP"/>
+        <result column="data" property="data" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="CHAR"/>
+        <result column="is_delete" property="isDelete" jdbcType="INTEGER"/>
+        <result column="creator_id" property="creatorId" jdbcType="VARCHAR"/>
+        <result column="modifier_id" property="modifierId" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="SELECT_All_Column">
+        SELECT id, app_id, customer_id, dept_id, period, 
+        dispatch_id, employee_id, payable_amount, actual_amount, is_viewed, 
+        view_date, data, status, is_delete, creator_id, 
+        modifier_id, create_date, modify_date
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        SELECT *
+        FROM sc_payroll_dispatch_detail
+        WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        DELETE FROM sc_payroll_dispatch_detail
+        WHERE id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        INSERT INTO sc_payroll_dispatch_detail ( app_id, 
+          customer_id, dept_id, period, 
+          dispatch_id, employee_id, payable_amount, 
+          actual_amount, is_viewed, view_date, 
+          data, status, is_delete, 
+          creator_id, modifier_id, create_date, 
+          modify_date )
+        VALUES ( #{appId,jdbcType=VARCHAR}, 
+          #{customerId,jdbcType=BIGINT}, #{deptId,jdbcType=INTEGER}, #{period,jdbcType=CHAR}, 
+          #{dispatchId,jdbcType=INTEGER}, #{employeeId,jdbcType=INTEGER}, #{payableAmount,jdbcType=DECIMAL}, 
+          #{actualAmount,jdbcType=DECIMAL}, #{isViewed,jdbcType=TINYINT}, #{viewDate,jdbcType=TIMESTAMP}, 
+          #{data,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{isDelete,jdbcType=INTEGER}, 
+          #{creatorId,jdbcType=VARCHAR}, #{modifierId,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+          #{modifyDate,jdbcType=TIMESTAMP} )
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        INSERT INTO sc_payroll_dispatch_detail
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="appId != null">
+                app_id,
+            </if>
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="deptId != null">
+                dept_id,
+            </if>
+            <if test="period != null">
+                period,
+            </if>
+            <if test="dispatchId != null">
+                dispatch_id,
+            </if>
+            <if test="employeeId != null">
+                employee_id,
+            </if>
+            <if test="payableAmount != null">
+                payable_amount,
+            </if>
+            <if test="actualAmount != null">
+                actual_amount,
+            </if>
+            <if test="isViewed != null">
+                is_viewed,
+            </if>
+            <if test="viewDate != null">
+                view_date,
+            </if>
+            <if test="data != null">
+                data,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="isDelete != null">
+                is_delete,
+            </if>
+            <if test="creatorId != null">
+                creator_id,
+            </if>
+            <if test="modifierId != null">
+                modifier_id,
+            </if>
+            <if test="createDate != null">
+                create_date,
+            </if>
+            <if test="modifyDate != null">
+                modify_date,
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="appId != null">
+                #{appId,jdbcType=VARCHAR},
+            </if>
+            <if test="customerId != null">
+                #{customerId,jdbcType=BIGINT},
+            </if>
+            <if test="deptId != null">
+                #{deptId,jdbcType=INTEGER},
+            </if>
+            <if test="period != null">
+                #{period,jdbcType=CHAR},
+            </if>
+            <if test="dispatchId != null">
+                #{dispatchId,jdbcType=INTEGER},
+            </if>
+            <if test="employeeId != null">
+                #{employeeId,jdbcType=INTEGER},
+            </if>
+            <if test="payableAmount != null">
+                #{payableAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="actualAmount != null">
+                #{actualAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="isViewed != null">
+                #{isViewed,jdbcType=TINYINT},
+            </if>
+            <if test="viewDate != null">
+                #{viewDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="data != null">
+                #{data,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=CHAR},
+            </if>
+            <if test="isDelete != null">
+                #{isDelete,jdbcType=INTEGER},
+            </if>
+            <if test="creatorId != null">
+                #{creatorId,jdbcType=VARCHAR},
+            </if>
+            <if test="modifierId != null">
+                #{modifierId,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyDate != null">
+                #{modifyDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO sc_payroll_dispatch_detail ( app_id, 
+          customer_id, dept_id, period, 
+          dispatch_id, employee_id, payable_amount, 
+          actual_amount, is_viewed, view_date, 
+          data, status, is_delete, 
+          creator_id, modifier_id, create_date, 
+          modify_date )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            (
+            #{item.appId,jdbcType=VARCHAR}, 
+            #{item.customerId,jdbcType=BIGINT}, #{item.deptId,jdbcType=INTEGER}, #{item.period,jdbcType=CHAR}, 
+            #{item.dispatchId,jdbcType=INTEGER}, #{item.employeeId,jdbcType=INTEGER}, #{item.payableAmount,jdbcType=DECIMAL}, 
+            #{item.actualAmount,jdbcType=DECIMAL}, #{item.isViewed,jdbcType=TINYINT}, #{item.viewDate,jdbcType=TIMESTAMP}, 
+            #{item.data,jdbcType=VARCHAR}, #{item.status,jdbcType=CHAR}, #{item.isDelete,jdbcType=INTEGER}, 
+            #{item.creatorId,jdbcType=VARCHAR}, #{item.modifierId,jdbcType=VARCHAR}, #{item.createDate,jdbcType=TIMESTAMP}, 
+            #{item.modifyDate,jdbcType=TIMESTAMP}
+            )
+        </foreach>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        UPDATE sc_payroll_dispatch_detail
+        <set>
+            <if test="appId != null">
+                app_id = #{appId,jdbcType=VARCHAR},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId,jdbcType=BIGINT},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId,jdbcType=INTEGER},
+            </if>
+            <if test="period != null">
+                period = #{period,jdbcType=CHAR},
+            </if>
+            <if test="dispatchId != null">
+                dispatch_id = #{dispatchId,jdbcType=INTEGER},
+            </if>
+            <if test="employeeId != null">
+                employee_id = #{employeeId,jdbcType=INTEGER},
+            </if>
+            <if test="payableAmount != null">
+                payable_amount = #{payableAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="actualAmount != null">
+                actual_amount = #{actualAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="isViewed != null">
+                is_viewed = #{isViewed,jdbcType=TINYINT},
+            </if>
+            <if test="viewDate != null">
+                view_date = #{viewDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="data != null">
+                data = #{data,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=CHAR},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete,jdbcType=INTEGER},
+            </if>
+            <if test="creatorId != null">
+                creator_id = #{creatorId,jdbcType=VARCHAR},
+            </if>
+            <if test="modifierId != null">
+                modifier_id = #{modifierId,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyDate != null">
+                modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.entity.ScPayrollDispatchDetail">
+        UPDATE sc_payroll_dispatch_detail
+        SET app_id = #{appId,jdbcType=VARCHAR},
+            customer_id = #{customerId,jdbcType=BIGINT},
+            dept_id = #{deptId,jdbcType=INTEGER},
+            period = #{period,jdbcType=CHAR},
+            dispatch_id = #{dispatchId,jdbcType=INTEGER},
+            employee_id = #{employeeId,jdbcType=INTEGER},
+            payable_amount = #{payableAmount,jdbcType=DECIMAL},
+            actual_amount = #{actualAmount,jdbcType=DECIMAL},
+            is_viewed = #{isViewed,jdbcType=TINYINT},
+            view_date = #{viewDate,jdbcType=TIMESTAMP},
+            data = #{data,jdbcType=VARCHAR},
+            status = #{status,jdbcType=CHAR},
+            is_delete = #{isDelete,jdbcType=INTEGER},
+            creator_id = #{creatorId,jdbcType=VARCHAR},
+            modifier_id = #{modifierId,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            modify_date = #{modifyDate,jdbcType=TIMESTAMP}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.ScPayrollDispatchDAO">
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.entity.ScPayrollDispatch">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="app_id" property="appId" jdbcType="VARCHAR"/>
+        <result column="customer_id" property="customerId" jdbcType="BIGINT"/>
+        <result column="dept_id" property="deptId" jdbcType="INTEGER"/>
+        <result column="period" property="period" jdbcType="CHAR"/>
+        <result column="payroll_name" property="payrollName" jdbcType="VARCHAR"/>
+        <result column="payroll_type" property="payrollType" jdbcType="CHAR"/>
+        <result column="salary_type" property="salaryType" jdbcType="CHAR"/>
+        <result column="reference_id" property="referenceId" jdbcType="INTEGER"/>
+        <result column="employee_count" property="employeeCount" jdbcType="INTEGER"/>
+        <result column="payable_total" property="payableTotal" jdbcType="DECIMAL"/>
+        <result column="actual_total" property="actualTotal" jdbcType="DECIMAL"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="hide_empty" property="hideEmpty" jdbcType="TINYINT"/>
+        <result column="dispatch_date" property="dispatchDate" jdbcType="TIMESTAMP"/>
+        <result column="template_id" property="templateId" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="CHAR"/>
+        <result column="is_delete" property="isDelete" jdbcType="INTEGER"/>
+        <result column="creator_id" property="creatorId" jdbcType="VARCHAR"/>
+        <result column="modifier_id" property="modifierId" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="SELECT_All_Column">
+        SELECT id, app_id, customer_id, dept_id, period, 
+        payroll_name, payroll_type, salary_type, reference_id, employee_count, 
+        payable_total, actual_total, content, hide_empty, dispatch_date, 
+        template_id, title, state, is_delete, creator_id, 
+        modifier_id, create_date, modify_date
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.entity.ScPayrollDispatch">
+        SELECT *
+        FROM sc_payroll_dispatch
+        WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.entity.ScPayrollDispatch">
+        DELETE FROM sc_payroll_dispatch
+        WHERE id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.boot.demo.auto.entity.ScPayrollDispatch">
+        INSERT INTO sc_payroll_dispatch ( app_id, 
+          customer_id, dept_id, period, 
+          payroll_name, payroll_type, salary_type, 
+          reference_id, employee_count, payable_total, 
+          actual_total, content, hide_empty, 
+          dispatch_date, template_id, title, 
+          state, is_delete, creator_id, 
+          modifier_id, create_date, modify_date )
+        VALUES ( #{appId,jdbcType=VARCHAR}, 
+          #{customerId,jdbcType=BIGINT}, #{deptId,jdbcType=INTEGER}, #{period,jdbcType=CHAR}, 
+          #{payrollName,jdbcType=VARCHAR}, #{payrollType,jdbcType=CHAR}, #{salaryType,jdbcType=CHAR}, 
+          #{referenceId,jdbcType=INTEGER}, #{employeeCount,jdbcType=INTEGER}, #{payableTotal,jdbcType=DECIMAL}, 
+          #{actualTotal,jdbcType=DECIMAL}, #{content,jdbcType=VARCHAR}, #{hideEmpty,jdbcType=TINYINT}, 
+          #{dispatchDate,jdbcType=TIMESTAMP}, #{templateId,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+          #{state,jdbcType=CHAR}, #{isDelete,jdbcType=INTEGER}, #{creatorId,jdbcType=VARCHAR}, 
+          #{modifierId,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{modifyDate,jdbcType=TIMESTAMP} )
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.entity.ScPayrollDispatch">
+        INSERT INTO sc_payroll_dispatch
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="appId != null">
+                app_id,
+            </if>
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="deptId != null">
+                dept_id,
+            </if>
+            <if test="period != null">
+                period,
+            </if>
+            <if test="payrollName != null">
+                payroll_name,
+            </if>
+            <if test="payrollType != null">
+                payroll_type,
+            </if>
+            <if test="salaryType != null">
+                salary_type,
+            </if>
+            <if test="referenceId != null">
+                reference_id,
+            </if>
+            <if test="employeeCount != null">
+                employee_count,
+            </if>
+            <if test="payableTotal != null">
+                payable_total,
+            </if>
+            <if test="actualTotal != null">
+                actual_total,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="hideEmpty != null">
+                hide_empty,
+            </if>
+            <if test="dispatchDate != null">
+                dispatch_date,
+            </if>
+            <if test="templateId != null">
+                template_id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+            <if test="isDelete != null">
+                is_delete,
+            </if>
+            <if test="creatorId != null">
+                creator_id,
+            </if>
+            <if test="modifierId != null">
+                modifier_id,
+            </if>
+            <if test="createDate != null">
+                create_date,
+            </if>
+            <if test="modifyDate != null">
+                modify_date,
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="appId != null">
+                #{appId,jdbcType=VARCHAR},
+            </if>
+            <if test="customerId != null">
+                #{customerId,jdbcType=BIGINT},
+            </if>
+            <if test="deptId != null">
+                #{deptId,jdbcType=INTEGER},
+            </if>
+            <if test="period != null">
+                #{period,jdbcType=CHAR},
+            </if>
+            <if test="payrollName != null">
+                #{payrollName,jdbcType=VARCHAR},
+            </if>
+            <if test="payrollType != null">
+                #{payrollType,jdbcType=CHAR},
+            </if>
+            <if test="salaryType != null">
+                #{salaryType,jdbcType=CHAR},
+            </if>
+            <if test="referenceId != null">
+                #{referenceId,jdbcType=INTEGER},
+            </if>
+            <if test="employeeCount != null">
+                #{employeeCount,jdbcType=INTEGER},
+            </if>
+            <if test="payableTotal != null">
+                #{payableTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="actualTotal != null">
+                #{actualTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="hideEmpty != null">
+                #{hideEmpty,jdbcType=TINYINT},
+            </if>
+            <if test="dispatchDate != null">
+                #{dispatchDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="templateId != null">
+                #{templateId,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                #{state,jdbcType=CHAR},
+            </if>
+            <if test="isDelete != null">
+                #{isDelete,jdbcType=INTEGER},
+            </if>
+            <if test="creatorId != null">
+                #{creatorId,jdbcType=VARCHAR},
+            </if>
+            <if test="modifierId != null">
+                #{modifierId,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyDate != null">
+                #{modifyDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO sc_payroll_dispatch ( app_id, 
+          customer_id, dept_id, period, 
+          payroll_name, payroll_type, salary_type, 
+          reference_id, employee_count, payable_total, 
+          actual_total, content, hide_empty, 
+          dispatch_date, template_id, title, 
+          state, is_delete, creator_id, 
+          modifier_id, create_date, modify_date )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            (
+            #{item.appId,jdbcType=VARCHAR}, 
+            #{item.customerId,jdbcType=BIGINT}, #{item.deptId,jdbcType=INTEGER}, #{item.period,jdbcType=CHAR}, 
+            #{item.payrollName,jdbcType=VARCHAR}, #{item.payrollType,jdbcType=CHAR}, #{item.salaryType,jdbcType=CHAR}, 
+            #{item.referenceId,jdbcType=INTEGER}, #{item.employeeCount,jdbcType=INTEGER}, #{item.payableTotal,jdbcType=DECIMAL}, 
+            #{item.actualTotal,jdbcType=DECIMAL}, #{item.content,jdbcType=VARCHAR}, #{item.hideEmpty,jdbcType=TINYINT}, 
+            #{item.dispatchDate,jdbcType=TIMESTAMP}, #{item.templateId,jdbcType=VARCHAR}, #{item.title,jdbcType=VARCHAR}, 
+            #{item.state,jdbcType=CHAR}, #{item.isDelete,jdbcType=INTEGER}, #{item.creatorId,jdbcType=VARCHAR}, 
+            #{item.modifierId,jdbcType=VARCHAR}, #{item.createDate,jdbcType=TIMESTAMP}, #{item.modifyDate,jdbcType=TIMESTAMP}
+            )
+        </foreach>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.entity.ScPayrollDispatch">
+        UPDATE sc_payroll_dispatch
+        <set>
+            <if test="appId != null">
+                app_id = #{appId,jdbcType=VARCHAR},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId,jdbcType=BIGINT},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId,jdbcType=INTEGER},
+            </if>
+            <if test="period != null">
+                period = #{period,jdbcType=CHAR},
+            </if>
+            <if test="payrollName != null">
+                payroll_name = #{payrollName,jdbcType=VARCHAR},
+            </if>
+            <if test="payrollType != null">
+                payroll_type = #{payrollType,jdbcType=CHAR},
+            </if>
+            <if test="salaryType != null">
+                salary_type = #{salaryType,jdbcType=CHAR},
+            </if>
+            <if test="referenceId != null">
+                reference_id = #{referenceId,jdbcType=INTEGER},
+            </if>
+            <if test="employeeCount != null">
+                employee_count = #{employeeCount,jdbcType=INTEGER},
+            </if>
+            <if test="payableTotal != null">
+                payable_total = #{payableTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="actualTotal != null">
+                actual_total = #{actualTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="hideEmpty != null">
+                hide_empty = #{hideEmpty,jdbcType=TINYINT},
+            </if>
+            <if test="dispatchDate != null">
+                dispatch_date = #{dispatchDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="templateId != null">
+                template_id = #{templateId,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                state = #{state,jdbcType=CHAR},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete,jdbcType=INTEGER},
+            </if>
+            <if test="creatorId != null">
+                creator_id = #{creatorId,jdbcType=VARCHAR},
+            </if>
+            <if test="modifierId != null">
+                modifier_id = #{modifierId,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyDate != null">
+                modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.entity.ScPayrollDispatch">
+        UPDATE sc_payroll_dispatch
+        SET app_id = #{appId,jdbcType=VARCHAR},
+            customer_id = #{customerId,jdbcType=BIGINT},
+            dept_id = #{deptId,jdbcType=INTEGER},
+            period = #{period,jdbcType=CHAR},
+            payroll_name = #{payrollName,jdbcType=VARCHAR},
+            payroll_type = #{payrollType,jdbcType=CHAR},
+            salary_type = #{salaryType,jdbcType=CHAR},
+            reference_id = #{referenceId,jdbcType=INTEGER},
+            employee_count = #{employeeCount,jdbcType=INTEGER},
+            payable_total = #{payableTotal,jdbcType=DECIMAL},
+            actual_total = #{actualTotal,jdbcType=DECIMAL},
+            content = #{content,jdbcType=VARCHAR},
+            hide_empty = #{hideEmpty,jdbcType=TINYINT},
+            dispatch_date = #{dispatchDate,jdbcType=TIMESTAMP},
+            template_id = #{templateId,jdbcType=VARCHAR},
+            title = #{title,jdbcType=VARCHAR},
+            state = #{state,jdbcType=CHAR},
+            is_delete = #{isDelete,jdbcType=INTEGER},
+            creator_id = #{creatorId,jdbcType=VARCHAR},
+            modifier_id = #{modifierId,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            modify_date = #{modifyDate,jdbcType=TIMESTAMP}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

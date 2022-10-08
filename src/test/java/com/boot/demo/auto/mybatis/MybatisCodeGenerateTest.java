@@ -31,7 +31,7 @@ public class MybatisCodeGenerateTest {
     @Autowired(required = false)
     private DruidDataSource dataSource;
 
-    private static final String[] tableNames = new String[] { "ips_declaration_record" };
+    private static final String[] tableNames = new String[] { "ips_declaration_record", "cr_group" };
 
     // 程序会自动找到basePath
     private static String basePath = System.getProperty("user.dir");

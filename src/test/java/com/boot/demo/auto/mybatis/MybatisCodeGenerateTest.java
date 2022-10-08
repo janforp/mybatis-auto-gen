@@ -63,11 +63,15 @@ public class MybatisCodeGenerateTest {
         String modalPackage = envInfo.getModalPackage();
         String daoPackage = envInfo.getDaoPackage();
 
+        // dataObject
         String modalFilePath = sourcePath + modalPackage.replace(".", File.separator) + File.separator + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + ".java";
+        // dao
         String daoFilePath = sourcePath + daoPackage.replace(".", File.separator) + File.separator + MyBatisGenUtils.getDaoNameByTableName(oneTableName) + ".java";
-
+        // mapper.xml
         String sqlMapperFilePath = sqlmapBasePath + MyBatisGenUtils.getSqlmapFileNameByTableName(oneTableName);
+
         try (Connection conn = dataSource.getConnection()) {
+            // 表信息
             TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, schema, oneTableName);
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
                 System.err.println("[ERROR] " + oneTableName + " 没有主键，无法生成。");

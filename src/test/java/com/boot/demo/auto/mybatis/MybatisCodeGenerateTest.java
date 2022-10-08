@@ -31,8 +31,6 @@ public class MybatisCodeGenerateTest {
     @Autowired(required = false)
     private DruidDataSource dataSource;
 
-    private static final EnvInfo envInfo = new EnvInfo();
-
     private static final String[] tableNames = new String[] { "ips_declaration_record" };
 
     // 程序会自动找到basePath
@@ -57,6 +55,7 @@ public class MybatisCodeGenerateTest {
     }
 
     public void codegenForOneTable(String oneTableName) throws Exception {
+        EnvInfo envInfo = new EnvInfo();
         String sourcePath = EnvInfo.buildSourcePath();
         String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
         String schema = envInfo.getSchema();
@@ -97,5 +96,4 @@ public class MybatisCodeGenerateTest {
             }
         }
     }
-
 }

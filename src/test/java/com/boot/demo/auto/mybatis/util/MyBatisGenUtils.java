@@ -4,11 +4,8 @@ import com.boot.demo.auto.mybatis.MybatisCodeGenerateTest;
 import lombok.experimental.UtilityClass;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -54,16 +51,8 @@ public class MyBatisGenUtils {
         return tableName + "-mapper.xml";
     }
 
-    public static String getCustomSqlmapFileNameByTableName(String tableName) {
-        return tableName + "-custom-mapper.xml";
-    }
-
     public static String getDaoNameByTableName(String tableName) {
         return getMobalNameByTableName(tableName) + "DAO";
-    }
-
-    public static String getDaoImplNameByTableName(String tableName) {
-        return getMobalNameByTableName(tableName) + "DAOImpl";
     }
 
     /**
@@ -85,12 +74,11 @@ public class MyBatisGenUtils {
         StringBuilder builder = new StringBuilder(param);
         Matcher mc = p.matcher(param);
         int i = 0;
-        Character found = null;
+        char found;
         while (mc.find()) {
             builder.deleteCharAt(mc.start() - i);
             found = builder.charAt(mc.start() - i);
-            builder.replace(mc.start() - i, mc.start() - i + 1, found
-                    .toString().toUpperCase());
+            builder.replace(mc.start() - i, mc.start() - i + 1, Character.toString(found).toUpperCase());
             i++;
         }
         return builder.toString();
@@ -112,57 +100,15 @@ public class MyBatisGenUtils {
         return "/**" + newLine + " * Created by " + MybatisCodeGenerateTest.class.getName() + " on " + new SimpleDateFormat("yyyy-MM-dd").format(new Date()) + newLine + " */" + newLine;
     }
 
-    private static void moveFile(File fromFile, File toFile) {// 复制文件
-        InputStream is = null;
-        FileOutputStream fos = null;
-        try {
-            is = new FileInputStream(fromFile);// 创建文件输入流
-            fos = new FileOutputStream(toFile);// 文件输出流
-            byte[] buffer = new byte[1024];// 字节数组
-            int len = -1;
-            while ((len = is.read(buffer)) != -1) {// 将文件内容写到文件中
-                fos.write(buffer, 0, len);
-            }
-            fromFile.delete();
-        } catch (Exception e) {// 捕获异常
-            e.printStackTrace();
-        } finally {
-            if (is != null) {
-                try {
-                    is.close();// 输入流关闭
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (fos != null) {
-                try {
-                    fos.close();// 输出流关闭
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    /**
-     * @param targetFile
-     * @param content
-     * @return
-     */
-    public static boolean writeText(File targetFile, String content,
-            String charSet) {
-        boolean flag = false;
+    @SuppressWarnings("all")
+    public static void writeText(File targetFile, String content, String charSet) {
         OutputStreamWriter out = null;
         if (!targetFile.getParentFile().exists()) {
             targetFile.getParentFile().mkdirs();
         }
         try {
-            out = new OutputStreamWriter(new FileOutputStream(targetFile),
-                    charSet);
+            out = new OutputStreamWriter(new FileOutputStream(targetFile), charSet);
             out.write(content.toCharArray());
-            flag = true;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -174,6 +120,5 @@ public class MyBatisGenUtils {
                 }
             }
         }
-        return flag;
     }
 }

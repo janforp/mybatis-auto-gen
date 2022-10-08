@@ -1,5 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
+import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
 import java.util.ArrayList;
@@ -12,14 +13,12 @@ import java.util.List;
  * @since 20220825
  */
 public class SqlMapperBuilder {
-
-    private static final String DAO_PACKAGE = "com.boot.demo.auto.dao";
-
     public static String buildSqlMapper(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
-        String daoName = DAO_PACKAGE + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
+        EnvInfo info = new EnvInfo();
+        String daoName = info.getDaoPackage() + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
         String newLine = "\n";
         buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(newLine);
         buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(newLine);

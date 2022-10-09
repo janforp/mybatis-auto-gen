@@ -29,15 +29,13 @@ public class MybatisCodeGenerateTest {
     public void codeAutoGenerateTest() throws Exception {
         try {
             for (String tableName : tableNames) {
-                Builder.codegenForOneTable(tableName, dataSource);
-                System.out.println(tableName + " - 生成完毕！");
+                boolean codegen = Builder.codegenForOneTable(tableName, dataSource);
+                Assert.assertTrue(codegen);
             }
         } finally {
             if (dataSource != null) {
                 dataSource.close();
             }
         }
-        boolean closed = dataSource.isClosed();
-        Assert.assertTrue(closed);
     }
 }

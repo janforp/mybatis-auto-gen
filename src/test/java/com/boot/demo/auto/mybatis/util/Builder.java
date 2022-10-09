@@ -15,7 +15,7 @@ import java.sql.Connection;
  */
 public class Builder {
 
-    public static void codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
+    public static boolean codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
         EnvInfo envInfo = new EnvInfo();
         String sourcePath = EnvInfo.buildSourcePath();
         String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
@@ -36,7 +36,7 @@ public class Builder {
             TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, schema, oneTableName);
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
                 System.err.println("[ERROR] " + oneTableName + " 没有主键，无法生成。");
-                return;
+                return false;
             }
 
             {
@@ -60,5 +60,6 @@ public class Builder {
                 }
             }
         }
+        return true;
     }
 }

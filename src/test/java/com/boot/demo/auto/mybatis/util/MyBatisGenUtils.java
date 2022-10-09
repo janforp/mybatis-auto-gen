@@ -45,7 +45,7 @@ class MyBatisGenUtils {
     }
 
     public static String getSqlmapFileNameByTableName(String tableName) {
-        return tableName + "-mapper.xml";
+        return initCapAndUnderlineToCamel(tableName) + "Mapper.xml";
     }
 
     public static String getDaoNameByTableName(String tableName) {

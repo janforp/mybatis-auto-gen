@@ -43,7 +43,7 @@ class SqlMapperBuilder {
         }
         {
             // BaseResultMap
-            buf.append("    ").append("<resultMap id=\"BaseResultMap\" type=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<resultMap id=\"BaseResultMap\" type=\"").append(modalName).append("\">").append(newLine);
             for (String column : columns) {
                 String propertyName = MyBatisGenUtils.underlineToCamel(column);
                 String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
@@ -59,7 +59,7 @@ class SqlMapperBuilder {
         }
         {
             // SELECT_All_Column
-            buf.append("    ").append("<sql id=\"SELECT_All_Column\">").append(newLine);
+            buf.append(newLine).append("    ").append("<sql id=\"SELECT_All_Column\">").append(newLine);
             buf.append("        ");
             buf.append("SELECT ");
             int i = 0;
@@ -78,7 +78,7 @@ class SqlMapperBuilder {
         }
         {
             // selectByPrimaryKey
-            buf.append("    ").append("<select id=\"getById\" resultMap=\"BaseResultMap\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<select id=\"getById\" resultMap=\"BaseResultMap\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("SELECT *").append(newLine);
             buf.append("        ").append("FROM ").append(tableName).append(newLine);
             buf.append("        ").append("WHERE ");
@@ -97,7 +97,7 @@ class SqlMapperBuilder {
         }
         {
             // deleteByPrimaryKey
-            buf.append("    ").append("<delete id=\"deleteByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<delete id=\"deleteByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("DELETE FROM ").append(tableName).append(newLine);
             buf.append("        ").append("WHERE ");
             int i = 0;
@@ -116,7 +116,7 @@ class SqlMapperBuilder {
         String selectKeyBuf = null;
         {
             // insert
-            buf.append("    ").append("<insert id=\"insert\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<insert id=\"insert\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ");
             int i = 0;
             for (String column : columns) {
@@ -175,7 +175,7 @@ class SqlMapperBuilder {
         }
         {
             // insertSelective
-            buf.append("    ").append("<insert id=\"insertSelective\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<insert id=\"insertSelective\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("INSERT INTO ").append(tableName).append(newLine);
             buf.append("        ").append("<trim prefix=\"(\" suffixOverrides=\",\" suffix=\")\">").append(newLine);
             for (String column : columns) {
@@ -205,8 +205,7 @@ class SqlMapperBuilder {
                     continue;
                 }
                 String propertyName = MyBatisGenUtils.underlineToCamel(column);
-                String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(
-                        tableInfo.getColumnTypes().get(column));
+                String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
                 boolean isPk = tableInfo.getPrimaryKeys().contains(column);
                 if (!isPk) {
                     buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(newLine);
@@ -226,7 +225,7 @@ class SqlMapperBuilder {
         }
         {
             // insertBatch
-            buf.append("    ").append("<insert id=\"insertBatch\" parameterType=\"java.util.List\">").append(newLine);
+            buf.append(newLine).append("    ").append("<insert id=\"insertBatch\" parameterType=\"java.util.List\">").append(newLine);
             buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ");
             int i = 0;
             for (String column : columns) {
@@ -274,7 +273,7 @@ class SqlMapperBuilder {
         }
         {
             // updateByPrimaryKeySelective
-            buf.append("    ").append("<update id=\"updateByPrimaryKeySelective\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<update id=\"updateByPrimaryKeySelective\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("UPDATE ").append(tableName).append(newLine);
             int i = 0;
             buf.append("        ").append("<set>").append(newLine);
@@ -310,7 +309,7 @@ class SqlMapperBuilder {
         }
         {
             // updateByPrimaryKey
-            buf.append("    ").append("<update id=\"updateByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append(newLine).append("    ").append("<update id=\"updateByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("UPDATE ").append(tableName).append(newLine);
             int i = 0;
             for (String column : columns) {
@@ -360,6 +359,8 @@ class SqlMapperBuilder {
             return "INTEGER";
         } else if (jdbcType.equalsIgnoreCase("datetime")) {
             return "TIMESTAMP";
+        } else if (jdbcType.equals("MEDIUMTEXT")) {
+            return "VARCHAR";
         } else {
             return jdbcType;
         }

@@ -1,6 +1,9 @@
 package com.boot.demo.auto.mybatis.domain;
 
+import org.assertj.core.util.Sets;
+
 import java.io.File;
+import java.util.Set;
 
 /**
  * EnvInfo
@@ -25,6 +28,17 @@ public class EnvInfo {
     public static final String account = "'${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'";
 
     public static final String newLine = "\n";
+
+    public static final Set<String> useDefaultColumnSet = Sets.newLinkedHashSet(
+            "is_delete",
+            "create_date",
+            "modify_date"
+    );
+
+    public static final Set<String> accountIdSet = Sets.newLinkedHashSet(
+            "creator_id",
+            "modifier_id"
+    );
 
     public static String buildSourcePath() {
         String basePath = System.getProperty("user.dir");

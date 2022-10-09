@@ -6,7 +6,6 @@ import com.boot.demo.auto.mybatis.domain.TableInfo;
 import javax.sql.DataSource;
 import java.io.File;
 import java.sql.Connection;
-import java.util.Set;
 
 /**
  * Builder
@@ -16,7 +15,7 @@ import java.util.Set;
  */
 public class Builder {
 
-    public static boolean codegenForOneTable(String oneTableName, Set<String> useDefaultColumnSet, Set<String> accountIdSet, DataSource dataSource) throws Exception {
+    public static boolean codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
         String sourcePath = EnvInfo.buildSourcePath();
         String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
         String fileCharset = EnvInfo.fileCharset;
@@ -47,7 +46,7 @@ public class Builder {
             }
 
             {
-                String mapperXml = SqlMapperBuilder.buildMapperXml(tableInfo, modalPackage, useDefaultColumnSet, accountIdSet);
+                String mapperXml = SqlMapperBuilder.buildMapperXml(tableInfo, modalPackage);
                 MyBatisGenUtils.writeText(new File(sqlMapperFilePath), mapperXml, fileCharset);
             }
 

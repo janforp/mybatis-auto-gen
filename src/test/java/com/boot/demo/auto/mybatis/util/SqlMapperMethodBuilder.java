@@ -4,7 +4,6 @@ import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * SqlMapperMethodBuilder
@@ -14,7 +13,7 @@ import java.util.Set;
  */
 public class SqlMapperMethodBuilder {
 
-    public static String buildInsertSelective(TableInfo tableInfo, String modalName, Set<String> accountIdSet) {
+    public static String buildInsertSelective(TableInfo tableInfo, String modalName) {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
@@ -56,7 +55,7 @@ public class SqlMapperMethodBuilder {
                 buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.newLine);
             }
 
-            if (accountIdSet.contains(column)) {
+            if (EnvInfo.accountIdSet.contains(column)) {
                 buf.append("                ").append(EnvInfo.account);
             } else {
                 buf.append("                ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
@@ -74,7 +73,7 @@ public class SqlMapperMethodBuilder {
         return buf.toString();
     }
 
-    public static String buildInsertBatch(TableInfo tableInfo, Set<String> accountIdSet) {
+    public static String buildInsertBatch(TableInfo tableInfo) {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
@@ -120,7 +119,7 @@ public class SqlMapperMethodBuilder {
                 buf.append(EnvInfo.newLine).append("            ");
             }
 
-            if (accountIdSet.contains(column)) {
+            if (EnvInfo.accountIdSet.contains(column)) {
                 buf.append(EnvInfo.account);
             } else {
                 buf.append("#{item.").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
@@ -152,7 +151,13 @@ public class SqlMapperMethodBuilder {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.newLine);
-            buf.append("                ").append(caseColumn).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+
+            buf.append("                ").append(caseColumn).append(" = ");
+            if (EnvInfo.accountIdSet.contains(column)) {
+                buf.append(EnvInfo.account);
+            } else {
+                buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            }
             buf.append(",");
             buf.append(EnvInfo.newLine);
             buf.append("            ").append("</if>").append(EnvInfo.newLine);
@@ -167,7 +172,8 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(EnvInfo.newLine).append("        ").append("AND ");
             }
-            buf.append(caseDbSensitiveWords(column)).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            buf.append(caseDbSensitiveWords(column)).append(" = ");
+            buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             i++;
         }
         buf.append(EnvInfo.newLine);
@@ -262,7 +268,7 @@ public class SqlMapperMethodBuilder {
         return buf.toString();
     }
 
-    public static String buildInsert(TableInfo tableInfo, String modalName, Set<String> accountIdSet) {
+    public static String buildInsert(TableInfo tableInfo, String modalName) {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
@@ -303,7 +309,7 @@ public class SqlMapperMethodBuilder {
                     buf.append(EnvInfo.newLine).append("        ");
                 }
             }
-            if (accountIdSet.contains(column)) {
+            if (EnvInfo.accountIdSet.contains(column)) {
                 buf.append(EnvInfo.account);
             } else {
                 buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
@@ -334,7 +340,12 @@ public class SqlMapperMethodBuilder {
             } else {
                 buf.append(",").append(EnvInfo.newLine).append("            ");
             }
-            buf.append(caseColumn).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            buf.append(caseColumn).append(" = ");
+            if (EnvInfo.accountIdSet.contains(column)) {
+                buf.append(EnvInfo.account);
+            } else {
+                buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            }
             i++;
         }
         buf.append(EnvInfo.newLine);

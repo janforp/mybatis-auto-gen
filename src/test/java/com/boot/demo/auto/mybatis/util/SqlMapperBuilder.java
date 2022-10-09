@@ -3,8 +3,6 @@ package com.boot.demo.auto.mybatis.util;
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
-import java.util.Set;
-
 /**
  * SqlMapperBuilder
  *
@@ -13,7 +11,7 @@ import java.util.Set;
  */
 class SqlMapperBuilder {
 
-    public static String buildMapperXml(TableInfo tableInfo, String modalPackage, Set<String> useDefaultColumnSet, Set<String> accountIdSet) {
+    public static String buildMapperXml(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
@@ -28,15 +26,15 @@ class SqlMapperBuilder {
             buf.append(SqlMapperMethodBuilder.buildBaseAllColumn(tableInfo));
         }
 
-        tableInfo.getColumns().removeAll(useDefaultColumnSet);
+        tableInfo.getColumns().removeAll(EnvInfo.useDefaultColumnSet);
 
         {
             // insert
-            buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName, accountIdSet));
+            buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName));
             // insertSelective
-            buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName, accountIdSet));
+            buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName));
             // 批量添加
-            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo, accountIdSet));
+            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo));
         }
 
         {

@@ -35,17 +35,6 @@ public class MybatisCodeGenerateTest {
             //            "ips_insurance_type_rule"
     );
 
-    private static final Set<String> useDefaultColumnSet = Sets.newLinkedHashSet(
-            "is_delete",
-            "create_date",
-            "modify_date"
-    );
-
-    public static final Set<String> accountIdSet = Sets.newLinkedHashSet(
-            "creator_id",
-            "modifier_id"
-    );
-
     @Autowired(required = false)
     private DruidDataSource dataSource;
 
@@ -53,7 +42,7 @@ public class MybatisCodeGenerateTest {
     public void codeAutoGenerateTest() throws Exception {
         try {
             for (String tableName : tableNameSet) {
-                boolean codegen = Builder.codegenForOneTable(tableName, useDefaultColumnSet, accountIdSet, dataSource);
+                boolean codegen = Builder.codegenForOneTable(tableName, dataSource);
                 Assert.assertTrue(codegen);
             }
         } finally {

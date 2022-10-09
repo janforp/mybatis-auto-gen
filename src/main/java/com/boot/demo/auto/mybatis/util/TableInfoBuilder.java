@@ -1,6 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
-import com.boot.demo.auto.mybatis.domain.EnvInfo;
+import com.boot.demo.auto.mybatis.domain.EnvInfoConstants;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 import lombok.experimental.UtilityClass;
 
@@ -88,7 +88,7 @@ class TableInfoBuilder {
                 columnTypes.put(columnName, colType);
                 int colSize = resultSetMetaData.getColumnDisplaySize(i + 1);
                 columnSizes.put(columnName, colSize);
-                if ((colType.equalsIgnoreCase("datetime") || colType.equalsIgnoreCase("timestamp")) && !EnvInfo.CREATE_UPDATE_DATE.contains(columnName)) {
+                if ((colType.equalsIgnoreCase("datetime") || colType.equalsIgnoreCase("timestamp")) && !EnvInfoConstants.CREATE_UPDATE_DATE.contains(columnName)) {
                     importUtil = true;
                 } else if (colType.equalsIgnoreCase("decimal")) {
                     importMath = true;

@@ -1,6 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
-import com.boot.demo.auto.mybatis.domain.EnvInfo;
+import com.boot.demo.auto.mybatis.domain.EnvInfoConstants;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
@@ -20,10 +20,10 @@ import java.sql.Connection;
 public class Builder {
 
     public static boolean codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
-        String sourcePath = EnvInfo.buildSourcePath();
-        String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
-        String modalPackage = EnvInfo.DATA_OBJECT_PACKAGE;
-        String daoPackage = EnvInfo.DAO_PACKAGE;
+        String sourcePath = EnvInfoConstants.buildSourcePath();
+        String sqlmapBasePath = EnvInfoConstants.buildSqlmapBasePath();
+        String modalPackage = EnvInfoConstants.DATA_OBJECT_PACKAGE;
+        String daoPackage = EnvInfoConstants.DAO_PACKAGE;
 
         // dataObject
         String modalFilePath = sourcePath + modalPackage.replace(".", File.separator) + File.separator + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + ".java";
@@ -34,8 +34,8 @@ public class Builder {
 
         try (Connection conn = dataSource.getConnection()) {
             // 表信息
-            TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfo.SCHEMA, oneTableName);
-            tableInfo.getColumns().removeAll(EnvInfo.USE_DEFAULT_COLUMN_SET);
+            TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfoConstants.SCHEMA, oneTableName);
+            tableInfo.getColumns().removeAll(EnvInfoConstants.USE_DEFAULT_COLUMN_SET);
 
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().isEmpty()) {
                 log.error("[ERROR] " + oneTableName + " 没有主键，无法生成。");
@@ -54,19 +54,19 @@ public class Builder {
             log.error("[WARN] 实体类 " + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + " 已存在，将会覆盖。");
         }
         String dataObject = DataObjectBuilder.buildDataObject(tableInfo, modalPackage);
-        MyBatisGenUtils.writeText(new File(modalFilePath), dataObject, EnvInfo.FILE_CHARSET);
+        MyBatisGenUtils.writeText(new File(modalFilePath), dataObject, EnvInfoConstants.FILE_CHARSET);
     }
 
     private static void writeMapperXml(TableInfo tableInfo, String modalPackage, String sqlMapperFilePath) {
         String mapperXml = SqlMapperBuilder.buildMapperXml(tableInfo, modalPackage);
-        MyBatisGenUtils.writeText(new File(sqlMapperFilePath), mapperXml, EnvInfo.FILE_CHARSET);
+        MyBatisGenUtils.writeText(new File(sqlMapperFilePath), mapperXml, EnvInfoConstants.FILE_CHARSET);
     }
 
     private static void writeDao(TableInfo tableInfo, String daoPackage, String daoFilePath, String modalPackage) {
         if (!new File(daoFilePath).exists()) {
             // 不存在才创建
             String daoSource = DaoBuilder.buildDao(tableInfo, daoPackage, modalPackage);
-            MyBatisGenUtils.writeText(new File(daoFilePath), daoSource, EnvInfo.FILE_CHARSET);
+            MyBatisGenUtils.writeText(new File(daoFilePath), daoSource, EnvInfoConstants.FILE_CHARSET);
         }
     }
 }

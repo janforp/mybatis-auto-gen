@@ -1,5 +1,6 @@
 package com.boot.demo.auto.mybatis.domain;
 
+import lombok.experimental.UtilityClass;
 import org.assertj.core.util.Sets;
 
 import java.io.File;
@@ -11,7 +12,9 @@ import java.util.Set;
  * @author zhucj
  * @since 20220825
  */
-public class EnvInfo {
+@UtilityClass
+@SuppressWarnings("all")
+public class EnvInfoConstants {
 
     public static final String VERSION = "20221027";
 
@@ -69,7 +72,7 @@ public class EnvInfo {
         if (!basePath.endsWith(File.separator)) {
             basePath = basePath + File.separator;
         }
-        String sourcePath = basePath + EnvInfo.SOURCE_PATH;
+        String sourcePath = basePath + EnvInfoConstants.SOURCE_PATH;
         if (!sourcePath.endsWith(File.separator)) {
             sourcePath = sourcePath + File.separator;
         }
@@ -78,7 +81,7 @@ public class EnvInfo {
 
     public static String buildSqlmapBasePath() {
         String basePath = System.getProperty("user.dir");
-        String sqlmapBasePath = basePath + File.separator + EnvInfo.SQLMAP_BASE_PATH;
+        String sqlmapBasePath = basePath + File.separator + EnvInfoConstants.SQLMAP_BASE_PATH;
         if (!sqlmapBasePath.endsWith(File.separator)) {
             sqlmapBasePath = sqlmapBasePath + File.separator;
         }

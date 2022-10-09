@@ -1,6 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
-import com.boot.demo.auto.mybatis.domain.EnvInfo;
+import com.boot.demo.auto.mybatis.domain.EnvInfoConstants;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 import lombok.experimental.UtilityClass;
 
@@ -17,10 +17,10 @@ class SqlMapperBuilder {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
-        String daoName = EnvInfo.DAO_PACKAGE + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
-        buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(EnvInfo.NEW_LINE);
-        buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(EnvInfo.NEW_LINE);
-        buf.append("<mapper namespace=\"").append(daoName).append("\">").append(EnvInfo.NEW_LINE);
+        String daoName = EnvInfoConstants.DAO_PACKAGE + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
+        buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(EnvInfoConstants.NEW_LINE);
+        buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(EnvInfoConstants.NEW_LINE);
+        buf.append("<mapper namespace=\"").append(daoName).append("\">").append(EnvInfoConstants.NEW_LINE);
         {
             // BaseResultMap
             buf.append(SqlMapperMethodBuilder.buildResultMap(tableInfo, modalName));

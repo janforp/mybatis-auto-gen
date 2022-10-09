@@ -1,6 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
-import com.boot.demo.auto.mybatis.domain.EnvInfo;
+import com.boot.demo.auto.mybatis.domain.EnvInfoConstants;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 import lombok.experimental.UtilityClass;
 import org.springframework.util.StringUtils;
@@ -107,8 +107,8 @@ class MyBatisGenUtils {
         tableComment = StringUtils.isEmpty(tableComment) ? tableInfo.getTableName() : tableComment;
         return "/**\n"
                 + " * " + tableComment + "\n" + "\n"
-                + " * @author " + EnvInfo.AUTHOR + "\n"
-                + " * @since " + EnvInfo.VERSION + "\n"
+                + " * @author " + EnvInfoConstants.AUTHOR + "\n"
+                + " * @since " + EnvInfoConstants.VERSION + "\n"
                 + " */\n";
     }
 

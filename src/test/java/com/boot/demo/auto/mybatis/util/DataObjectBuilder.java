@@ -36,12 +36,14 @@ class DataObjectBuilder {
         }
 
         buf.append(MyBatisGenUtils.getAuthorInfo());
+        buf.append("@Data").append(newLine);
         buf.append("public class ").append(modalName).append(" {").append(newLine);
         buf.append(newLine);
 
         Map<String, String> columnCommentMap = tableInfo.getColumnCommentMap();
 
         List<String> columnList = tableInfo.getColumns();
+        int size = columnList.size();
         for (String column : columnList) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String javaType = MyBatisGenUtils.getJavaTypeByJdbcType(tableInfo.getColumnTypes().get(column));
@@ -51,7 +53,14 @@ class DataObjectBuilder {
                 String buildComment = buildComment(comment);
                 buf.append("    ").append(buildComment);
             }
-            buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(newLine).append(newLine);
+            System.out.println(size + propertyName);
+            size--;
+            boolean lastProperty = size == 0;
+            if (lastProperty) {
+                buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";");
+            } else {
+                buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(newLine).append(newLine);
+            }
         }
         buf.append(newLine);
         buf.append("}");

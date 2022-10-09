@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
+import lombok.experimental.UtilityClass;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @author zhucj
  * @since 20220825
  */
+@UtilityClass
 class DaoBuilder {
 
     static String buildDao(TableInfo tableInfo, String daoPackage, String modalPackage) {

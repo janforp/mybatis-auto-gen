@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
+import lombok.experimental.UtilityClass;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,6 +20,7 @@ import java.util.Map;
  * @author zhucj
  * @since 20220825
  */
+@UtilityClass
 class TableInfoBuilder {
 
     private static String getTableComment(Connection conn, String schema, String tableName) throws SQLException {
@@ -33,6 +35,9 @@ class TableInfoBuilder {
             return "";
         }
         int i = ddl.lastIndexOf("COMMENT=");
+        if (i == -1) {
+            return "";
+        }
         ddl = ddl.substring(i);
         ddl = ddl.replace("COMMENT='", "");
         ddl = ddl.replace("'", "");

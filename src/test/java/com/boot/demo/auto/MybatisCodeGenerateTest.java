@@ -1,4 +1,4 @@
-package com.boot.demo.auto.mybatis;
+package com.boot.demo.auto;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.boot.demo.auto.mybatis.util.Builder;
@@ -26,15 +26,15 @@ import java.util.Set;
 public class MybatisCodeGenerateTest {
 
     private static final Set<String> tableNameSet = Sets.newLinkedHashSet(
-            //            "cr_checklist",
-            "cr_group"
-            //            "cr_group_tester",
-            //            "cr_project",
-            //            "cr_project_tester",
-            //            "cr_question",
-            //            "cr_version_used_info",
-            //            "ips_declaration_record",
-            //            "ips_insurance_type_rule"
+            "cr_checklist",
+            "cr_group",
+            "cr_group_tester",
+            "cr_project",
+            "cr_project_tester",
+            "cr_question",
+            "cr_version_used_info",
+            "ips_declaration_record",
+            "ips_insurance_type_rule"
     );
 
     @Autowired(required = false)

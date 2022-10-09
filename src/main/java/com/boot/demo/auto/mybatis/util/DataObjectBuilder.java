@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
+import lombok.experimental.UtilityClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Map;
  * @author zhucj
  * @since 20220825
  */
+@UtilityClass
 class DataObjectBuilder {
 
     static String buildDataObject(TableInfo tableInfo, String modalPackage) {

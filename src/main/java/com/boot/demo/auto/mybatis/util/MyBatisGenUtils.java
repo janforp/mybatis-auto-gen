@@ -3,6 +3,7 @@ package com.boot.demo.auto.mybatis.util;
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 import lombok.experimental.UtilityClass;
+import org.springframework.util.StringUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -102,8 +103,10 @@ class MyBatisGenUtils {
     }
 
     public static String getAuthorInfo(TableInfo tableInfo) {
+        String tableComment = tableInfo.getTableComment();
+        tableComment = StringUtils.isEmpty(tableComment) ? tableInfo.getTableName() : tableComment;
         return "/**\n"
-                + " * " + tableInfo.getTableComment() + "\n" + "\n"
+                + " * " + tableComment + "\n" + "\n"
                 + " * @author " + EnvInfo.AUTHOR + "\n"
                 + " * @since " + EnvInfo.VERSION + "\n"
                 + " */\n";

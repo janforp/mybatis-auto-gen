@@ -22,7 +22,6 @@ public class Builder {
     public static boolean codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
         String sourcePath = EnvInfo.buildSourcePath();
         String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
-        String fileCharset = EnvInfo.FILE_CHARSET;
         String modalPackage = EnvInfo.DATA_OBJECT_PACKAGE;
         String daoPackage = EnvInfo.DAO_PACKAGE;
 
@@ -36,35 +35,38 @@ public class Builder {
         try (Connection conn = dataSource.getConnection()) {
             // 表信息
             TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfo.SCHEMA, oneTableName);
-
             tableInfo.getColumns().removeAll(EnvInfo.USE_DEFAULT_COLUMN_SET);
 
-            if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
+            if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().isEmpty()) {
                 log.error("[ERROR] " + oneTableName + " 没有主键，无法生成。");
                 return false;
             }
 
-            {
-                if (new File(modalFilePath).exists()) {
-                    log.error("[WARN] 实体类 " + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + " 已存在，将会覆盖。");
-                }
-                String dataObject = DataObjectBuilder.buildDataObject(tableInfo, modalPackage);
-                MyBatisGenUtils.writeText(new File(modalFilePath), dataObject, fileCharset);
-            }
-
-            {
-                String mapperXml = SqlMapperBuilder.buildMapperXml(tableInfo, modalPackage);
-                MyBatisGenUtils.writeText(new File(sqlMapperFilePath), mapperXml, fileCharset);
-            }
-
-            {
-                if (!new File(daoFilePath).exists()) {
-                    // 不存在才创建
-                    String daoSource = DaoBuilder.buildDao(tableInfo, daoPackage, modalPackage);
-                    MyBatisGenUtils.writeText(new File(daoFilePath), daoSource, fileCharset);
-                }
-            }
+            writeDataObject(tableInfo, modalPackage, modalFilePath, oneTableName);
+            writeMapperXml(tableInfo, modalPackage, sqlMapperFilePath);
+            writeDao(tableInfo, daoPackage, daoFilePath, modalPackage);
         }
         return true;
+    }
+
+    private static void writeDataObject(TableInfo tableInfo, String modalPackage, String modalFilePath, String oneTableName) {
+        if (new File(modalFilePath).exists()) {
+            log.error("[WARN] 实体类 " + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + " 已存在，将会覆盖。");
+        }
+        String dataObject = DataObjectBuilder.buildDataObject(tableInfo, modalPackage);
+        MyBatisGenUtils.writeText(new File(modalFilePath), dataObject, EnvInfo.FILE_CHARSET);
+    }
+
+    private static void writeMapperXml(TableInfo tableInfo, String modalPackage, String sqlMapperFilePath) {
+        String mapperXml = SqlMapperBuilder.buildMapperXml(tableInfo, modalPackage);
+        MyBatisGenUtils.writeText(new File(sqlMapperFilePath), mapperXml, EnvInfo.FILE_CHARSET);
+    }
+
+    private static void writeDao(TableInfo tableInfo, String daoPackage, String daoFilePath, String modalPackage) {
+        if (!new File(daoFilePath).exists()) {
+            // 不存在才创建
+            String daoSource = DaoBuilder.buildDao(tableInfo, daoPackage, modalPackage);
+            MyBatisGenUtils.writeText(new File(daoFilePath), daoSource, EnvInfo.FILE_CHARSET);
+        }
     }
 }

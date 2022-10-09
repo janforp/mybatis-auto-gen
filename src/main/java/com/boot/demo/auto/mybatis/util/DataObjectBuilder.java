@@ -56,10 +56,8 @@ class DataObjectBuilder {
             String javaType = MyBatisGenUtils.getJavaTypeByJdbcType(tableInfo.getColumnTypes().get(column));
 
             String comment = columnCommentMap.get(column);
-            if (comment != null) {
-                String buildComment = buildComment(comment);
-                buf.append("    ").append(buildComment);
-            }
+            String buildComment = buildComment(comment, column);
+            buf.append("    ").append(buildComment);
             size--;
             boolean lastProperty = size == 0;
             if (lastProperty) {
@@ -73,9 +71,9 @@ class DataObjectBuilder {
         return buf.toString();
     }
 
-    private static String buildComment(String comment) {
+    private static String buildComment(String comment, String column) {
         return "/**\n"
-                + "     * " + comment + "\n"
+                + "     * " + ((comment == null || comment.length() == 0) ? column : comment) + "\n"
                 + "     */" + "\n";
     }
 }

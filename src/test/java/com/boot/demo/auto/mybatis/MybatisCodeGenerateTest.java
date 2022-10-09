@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.boot.demo.auto.mybatis.util.Builder;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.buf.StringUtils;
 import org.assertj.core.util.Sets;
 import org.junit.Assert;
@@ -21,6 +22,7 @@ import java.util.Set;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class MybatisCodeGenerateTest {
 
     private static final Set<String> tableNameSet = Sets.newLinkedHashSet(
@@ -50,6 +52,6 @@ public class MybatisCodeGenerateTest {
                 dataSource.close();
             }
         }
-        System.out.println(StringUtils.join(tableNameSet) + " 生成完毕！");
+        log.error(StringUtils.join(tableNameSet) + " 生成完毕！");
     }
 }

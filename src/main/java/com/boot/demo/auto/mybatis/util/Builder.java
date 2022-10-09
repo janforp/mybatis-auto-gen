@@ -2,6 +2,8 @@ package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
+import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
 import java.io.File;
@@ -13,6 +15,8 @@ import java.sql.Connection;
  * @author zhucj
  * @since 20220825
  */
+@UtilityClass
+@Slf4j
 public class Builder {
 
     public static boolean codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
@@ -36,13 +40,13 @@ public class Builder {
             tableInfo.getColumns().removeAll(EnvInfo.USE_DEFAULT_COLUMN_SET);
 
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
-                System.err.println("[ERROR] " + oneTableName + " 没有主键，无法生成。");
+                log.error("[ERROR] " + oneTableName + " 没有主键，无法生成。");
                 return false;
             }
 
             {
                 if (new File(modalFilePath).exists()) {
-                    System.err.println("[WARN] 实体类 " + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + " 已存在，将会覆盖。");
+                    log.error("[WARN] 实体类 " + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + " 已存在，将会覆盖。");
                 }
                 String dataObject = DataObjectBuilder.buildDataObject(tableInfo, modalPackage);
                 MyBatisGenUtils.writeText(new File(modalFilePath), dataObject, fileCharset);

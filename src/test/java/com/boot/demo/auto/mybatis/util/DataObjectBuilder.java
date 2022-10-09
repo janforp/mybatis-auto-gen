@@ -17,28 +17,28 @@ class DataObjectBuilder {
     static String buildDataObject(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String modalName = MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
-        buf.append("package ").append(modalPackage).append(";").append(EnvInfo.newLine);
-        buf.append(EnvInfo.newLine);
+        buf.append("package ").append(modalPackage).append(";").append(EnvInfo.NEW_LINE);
+        buf.append(EnvInfo.NEW_LINE);
 
-        buf.append("import lombok.Data;").append(EnvInfo.newLine);
+        buf.append("import lombok.Data;").append(EnvInfo.NEW_LINE);
 
         if (tableInfo.isImportUtil() || tableInfo.isImportSql() || tableInfo.isImportMath()) {
             if (tableInfo.isImportSql()) {
-                buf.append("import java.sql.*;").append(EnvInfo.newLine);
+                buf.append("import java.sql.*;").append(EnvInfo.NEW_LINE);
             }
             if (tableInfo.isImportUtil()) {
-                buf.append("import java.sql.Date;").append(EnvInfo.newLine);
+                buf.append("import java.sql.Date;").append(EnvInfo.NEW_LINE);
             }
             if (tableInfo.isImportMath()) {
-                buf.append("import java.math.BigDecimal;").append(EnvInfo.newLine);
+                buf.append("import java.math.BigDecimal;").append(EnvInfo.NEW_LINE);
             }
-            buf.append(EnvInfo.newLine);
+            buf.append(EnvInfo.NEW_LINE);
         }
 
         buf.append(MyBatisGenUtils.getAuthorInfo());
-        buf.append("@Data").append(EnvInfo.newLine);
-        buf.append("public class ").append(modalName).append(" {").append(EnvInfo.newLine);
-        buf.append(EnvInfo.newLine);
+        buf.append("@Data").append(EnvInfo.NEW_LINE);
+        buf.append("public class ").append(modalName).append(" {").append(EnvInfo.NEW_LINE);
+        buf.append(EnvInfo.NEW_LINE);
 
         Map<String, String> columnCommentMap = tableInfo.getColumnCommentMap();
 
@@ -58,10 +58,10 @@ class DataObjectBuilder {
             if (lastProperty) {
                 buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";");
             } else {
-                buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(EnvInfo.newLine).append(EnvInfo.newLine);
+                buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(EnvInfo.NEW_LINE).append(EnvInfo.NEW_LINE);
             }
         }
-        buf.append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
         buf.append("}");
         return buf.toString();
     }

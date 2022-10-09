@@ -15,10 +15,10 @@ class SqlMapperBuilder {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
-        String daoName = EnvInfo.daoPackage + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
-        buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(EnvInfo.newLine);
-        buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(EnvInfo.newLine);
-        buf.append("<mapper namespace=\"").append(daoName).append("\">").append(EnvInfo.newLine);
+        String daoName = EnvInfo.DAO_PACKAGE + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
+        buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(EnvInfo.NEW_LINE);
+        buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(EnvInfo.NEW_LINE);
+        buf.append("<mapper namespace=\"").append(daoName).append("\">").append(EnvInfo.NEW_LINE);
         {
             // BaseResultMap
             buf.append(SqlMapperMethodBuilder.buildResultMap(tableInfo, modalName));
@@ -26,7 +26,7 @@ class SqlMapperBuilder {
             buf.append(SqlMapperMethodBuilder.buildBaseAllColumn(tableInfo));
         }
 
-        tableInfo.getColumns().removeAll(EnvInfo.useDefaultColumnSet);
+        tableInfo.getColumns().removeAll(EnvInfo.USE_DEFAULT_COLUMN_SET);
 
         {
             // insert

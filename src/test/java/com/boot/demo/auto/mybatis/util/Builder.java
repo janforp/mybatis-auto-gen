@@ -18,9 +18,9 @@ public class Builder {
     public static boolean codegenForOneTable(String oneTableName, DataSource dataSource) throws Exception {
         String sourcePath = EnvInfo.buildSourcePath();
         String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
-        String fileCharset = EnvInfo.fileCharset;
-        String modalPackage = EnvInfo.modalPackage;
-        String daoPackage = EnvInfo.daoPackage;
+        String fileCharset = EnvInfo.FILE_CHARSET;
+        String modalPackage = EnvInfo.DATA_OBJECT_PACKAGE;
+        String daoPackage = EnvInfo.DAO_PACKAGE;
 
         // dataObject
         String modalFilePath = sourcePath + modalPackage.replace(".", File.separator) + File.separator + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + ".java";
@@ -31,7 +31,7 @@ public class Builder {
 
         try (Connection conn = dataSource.getConnection()) {
             // 表信息
-            TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfo.schema, oneTableName);
+            TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfo.SCHEMA, oneTableName);
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
                 System.err.println("[ERROR] " + oneTableName + " 没有主键，无法生成。");
                 return false;

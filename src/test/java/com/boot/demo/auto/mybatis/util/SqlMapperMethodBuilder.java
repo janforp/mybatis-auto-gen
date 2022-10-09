@@ -19,9 +19,9 @@ public class SqlMapperMethodBuilder {
         String tableName = tableInfo.getTableName();
 
         // insertSelective
-        buf.append(EnvInfo.newLine).append("    ").append("<insert id=\"insertSelective\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.newLine);
-        buf.append("        ").append("INSERT INTO ").append(tableName).append(EnvInfo.newLine);
-        buf.append("        ").append("<trim prefix=\"(\" suffixOverrides=\",\" suffix=\")\">").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<insert id=\"insertSelective\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("INSERT INTO ").append(tableName).append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("<trim prefix=\"(\" suffixOverrides=\",\" suffix=\")\">").append(EnvInfo.NEW_LINE);
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
                 // 主键是自增长的就不插入主键
@@ -31,18 +31,18 @@ public class SqlMapperMethodBuilder {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             boolean isPk = tableInfo.getPrimaryKeys().contains(column);
             if (!isPk) {
-                buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.newLine);
+                buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.NEW_LINE);
             }
             buf.append("                ").append(caseColumn);
             buf.append(",");
-            buf.append(EnvInfo.newLine);
+            buf.append(EnvInfo.NEW_LINE);
             if (!isPk) {
-                buf.append("            ").append("</if>").append(EnvInfo.newLine);
+                buf.append("            ").append("</if>").append(EnvInfo.NEW_LINE);
             }
         }
-        buf.append("        ").append("</trim>").append(EnvInfo.newLine);
-        buf.append("        ").append("VALUES").append(EnvInfo.newLine);
-        buf.append("        ").append("<trim prefix=\"(\" suffixOverrides=\",\" suffix=\")\">").append(EnvInfo.newLine);
+        buf.append("        ").append("</trim>").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("VALUES").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("<trim prefix=\"(\" suffixOverrides=\",\" suffix=\")\">").append(EnvInfo.NEW_LINE);
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
                 // 主键是自增长的就不插入主键
@@ -52,24 +52,24 @@ public class SqlMapperMethodBuilder {
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             boolean isPk = tableInfo.getPrimaryKeys().contains(column);
             if (!isPk) {
-                buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.newLine);
+                buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.NEW_LINE);
             }
 
-            if (EnvInfo.accountIdSet.contains(column)) {
-                buf.append("                ").append(EnvInfo.account);
+            if (EnvInfo.ACCOUNT_ID_COLUMN_SET.contains(column)) {
+                buf.append("                ").append(EnvInfo.ACCOUNT);
             } else {
                 buf.append("                ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             }
 
             buf.append(",");
-            buf.append(EnvInfo.newLine);
+            buf.append(EnvInfo.NEW_LINE);
             if (!isPk) {
-                buf.append("            ").append("</if>").append(EnvInfo.newLine);
+                buf.append("            ").append("</if>").append(EnvInfo.NEW_LINE);
             }
         }
-        buf.append("        ").append("</trim>").append(EnvInfo.newLine);
+        buf.append("        ").append("</trim>").append(EnvInfo.NEW_LINE);
 
-        buf.append("    ").append("</insert>").append(EnvInfo.newLine);
+        buf.append("    ").append("</insert>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -79,8 +79,8 @@ public class SqlMapperMethodBuilder {
         String tableName = tableInfo.getTableName();
 
         // insertBatch
-        buf.append(EnvInfo.newLine).append("    ").append("<insert id=\"insertBatch\" parameterType=\"java.util.List\">").append(EnvInfo.newLine);
-        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<insert id=\"insertBatch\" parameterType=\"java.util.List\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ").append(EnvInfo.NEW_LINE);
         buf.append("        ");
         int i = 0;
         for (String column : columns) {
@@ -92,15 +92,15 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(", ");
                 if (i % 3 == 0) {
-                    buf.append(EnvInfo.newLine).append("        ");
+                    buf.append(EnvInfo.NEW_LINE).append("        ");
                 }
             }
             buf.append(caseColumn);
             i++;
         }
-        buf.append(" )").append(EnvInfo.newLine);
-        buf.append("        ").append("VALUES").append(EnvInfo.newLine);
-        buf.append("        ").append("<foreach collection=\"list\" item=\"item\" index=\"index\" separator=\",\" >").append(EnvInfo.newLine);
+        buf.append(" )").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("VALUES").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("<foreach collection=\"list\" item=\"item\" index=\"index\" separator=\",\" >").append(EnvInfo.NEW_LINE);
         buf.append("            ").append("(");
         i = 0;
         for (String column : columns) {
@@ -113,23 +113,23 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(", ");
                 if (i % 3 == 0) {
-                    buf.append(EnvInfo.newLine).append("            ");
+                    buf.append(EnvInfo.NEW_LINE).append("            ");
                 }
             } else {
-                buf.append(EnvInfo.newLine).append("            ");
+                buf.append(EnvInfo.NEW_LINE).append("            ");
             }
 
-            if (EnvInfo.accountIdSet.contains(column)) {
-                buf.append(EnvInfo.account);
+            if (EnvInfo.ACCOUNT_ID_COLUMN_SET.contains(column)) {
+                buf.append(EnvInfo.ACCOUNT);
             } else {
                 buf.append("#{item.").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             }
             i++;
         }
-        buf.append(EnvInfo.newLine);
-        buf.append("            ").append(")").append(EnvInfo.newLine);
-        buf.append("        ").append("</foreach>").append(EnvInfo.newLine);
-        buf.append("    ").append("</insert>").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("            ").append(")").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("</foreach>").append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</insert>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -138,10 +138,10 @@ public class SqlMapperMethodBuilder {
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
 
-        buf.append(EnvInfo.newLine).append("    ").append("<update id=\"updateByPrimaryKeySelective\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.newLine);
-        buf.append("        ").append("UPDATE ").append(tableName).append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<update id=\"updateByPrimaryKeySelective\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("UPDATE ").append(tableName).append(EnvInfo.NEW_LINE);
         int i = 0;
-        buf.append("        ").append("<set>").append(EnvInfo.newLine);
+        buf.append("        ").append("<set>").append(EnvInfo.NEW_LINE);
         for (String column : columns) {
             if (tableInfo.getPrimaryKeys().contains(column)) {
                 i++;
@@ -150,34 +150,34 @@ public class SqlMapperMethodBuilder {
             String caseColumn = caseDbSensitiveWords(column);
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
-            buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.newLine);
+            buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.NEW_LINE);
 
             buf.append("                ").append(caseColumn).append(" = ");
-            if (EnvInfo.accountIdSet.contains(column)) {
-                buf.append(EnvInfo.account);
+            if (EnvInfo.ACCOUNT_ID_COLUMN_SET.contains(column)) {
+                buf.append(EnvInfo.ACCOUNT);
             } else {
                 buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             }
             buf.append(",");
-            buf.append(EnvInfo.newLine);
-            buf.append("            ").append("</if>").append(EnvInfo.newLine);
+            buf.append(EnvInfo.NEW_LINE);
+            buf.append("            ").append("</if>").append(EnvInfo.NEW_LINE);
             i++;
         }
-        buf.append("        ").append("</set>").append(EnvInfo.newLine);
+        buf.append("        ").append("</set>").append(EnvInfo.NEW_LINE);
         buf.append("        ").append("WHERE ");
         i = 0;
         for (String column : tableInfo.getPrimaryKeys()) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             if (i > 0) {
-                buf.append(EnvInfo.newLine).append("        ").append("AND ");
+                buf.append(EnvInfo.NEW_LINE).append("        ").append("AND ");
             }
             buf.append(caseDbSensitiveWords(column)).append(" = ");
             buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             i++;
         }
-        buf.append(EnvInfo.newLine);
-        buf.append("    ").append("</update>").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</update>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -185,21 +185,21 @@ public class SqlMapperMethodBuilder {
         List<String> columns = tableInfo.getColumns();
         StringBuilder buf = new StringBuilder(4096);
         // SELECT_All_Column
-        buf.append(EnvInfo.newLine).append("    ").append("<sql id=\"BASE_All_COLUMN\">").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<sql id=\"BASE_All_COLUMN\">").append(EnvInfo.NEW_LINE);
         buf.append("        ");
         int i = 0;
         for (String column : columns) {
             if (i > 0) {
                 buf.append(", ");
                 if (i % 5 == 0) {
-                    buf.append(EnvInfo.newLine).append("        ");
+                    buf.append(EnvInfo.NEW_LINE).append("        ");
                 }
             }
             buf.append(caseDbSensitiveWords(column));
             i++;
         }
-        buf.append(EnvInfo.newLine);
-        buf.append("    ").append("</sql>").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</sql>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -207,7 +207,7 @@ public class SqlMapperMethodBuilder {
         List<String> columns = tableInfo.getColumns();
         StringBuilder buf = new StringBuilder(4096);
         // BaseResultMap
-        buf.append(EnvInfo.newLine).append("    ").append("<resultMap id=\"BaseResultMap\" type=\"").append(modalName).append("\">").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<resultMap id=\"BaseResultMap\" type=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
         for (String column : columns) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
@@ -217,9 +217,9 @@ public class SqlMapperMethodBuilder {
             } else {
                 buf.append("<result");
             }
-            buf.append(" column=\"").append(column).append("\" property=\"").append(propertyName).append("\" jdbcType=\"").append(jdbcType).append("\"/>").append(EnvInfo.newLine);
+            buf.append(" column=\"").append(column).append("\" property=\"").append(propertyName).append("\" jdbcType=\"").append(jdbcType).append("\"/>").append(EnvInfo.NEW_LINE);
         }
-        buf.append("    ").append("</resultMap>").append(EnvInfo.newLine);
+        buf.append("    ").append("</resultMap>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -227,22 +227,22 @@ public class SqlMapperMethodBuilder {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         // selectByPrimaryKey
-        buf.append(EnvInfo.newLine).append("    ").append("<select id=\"getById\" resultMap=\"BaseResultMap\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.newLine);
-        buf.append("        ").append("SELECT ").append(EnvInfo.newLine).append("        ").append("<include refid=\"BASE_All_COLUMN\"/>").append(EnvInfo.newLine);
-        buf.append("        ").append("FROM ").append(tableName).append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<select id=\"getById\" resultMap=\"BaseResultMap\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("SELECT ").append(EnvInfo.NEW_LINE).append("        ").append("<include refid=\"BASE_All_COLUMN\"/>").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("FROM ").append(tableName).append(EnvInfo.NEW_LINE);
         buf.append("        ").append("WHERE ");
         int i = 0;
         for (String column : tableInfo.getPrimaryKeys()) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             if (i > 0) {
-                buf.append(EnvInfo.newLine).append("        ").append("AND ");
+                buf.append(EnvInfo.NEW_LINE).append("        ").append("AND ");
             }
             buf.append(caseDbSensitiveWords(column)).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             i++;
         }
-        buf.append(EnvInfo.newLine);
-        buf.append("    ").append("</select>").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</select>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -250,21 +250,21 @@ public class SqlMapperMethodBuilder {
         // deleteByPrimaryKey
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
-        buf.append(EnvInfo.newLine).append("    ").append("<delete id=\"deleteByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.newLine);
-        buf.append("        ").append("DELETE FROM ").append(tableName).append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<delete id=\"deleteByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("DELETE FROM ").append(tableName).append(EnvInfo.NEW_LINE);
         buf.append("        ").append("WHERE ");
         int i = 0;
         for (String column : tableInfo.getPrimaryKeys()) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             if (i > 0) {
-                buf.append(EnvInfo.newLine).append("        ").append("AND ");
+                buf.append(EnvInfo.NEW_LINE).append("        ").append("AND ");
             }
             buf.append(caseDbSensitiveWords(column)).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             i++;
         }
-        buf.append(EnvInfo.newLine);
-        buf.append("    ").append("</delete>").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</delete>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -274,8 +274,8 @@ public class SqlMapperMethodBuilder {
         String tableName = tableInfo.getTableName();
 
         // insert
-        buf.append(EnvInfo.newLine).append("    ").append("<insert id=\"insert\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.newLine);
-        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<insert id=\"insert\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ").append(EnvInfo.NEW_LINE);
         buf.append("        ");
         int i = 0;
         for (String column : columns) {
@@ -287,14 +287,14 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(", ");
                 if (i % 3 == 0) {
-                    buf.append(EnvInfo.newLine).append("        ");
+                    buf.append(EnvInfo.NEW_LINE).append("        ");
                 }
             }
             buf.append(caseColumn);
             i++;
         }
-        buf.append(" )").append(EnvInfo.newLine);
-        buf.append("        ").append("VALUES ( ").append(EnvInfo.newLine).append("        ");
+        buf.append(" )").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("VALUES ( ").append(EnvInfo.NEW_LINE).append("        ");
         i = 0;
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
@@ -306,18 +306,18 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(", ");
                 if (i % 3 == 0) {
-                    buf.append(EnvInfo.newLine).append("        ");
+                    buf.append(EnvInfo.NEW_LINE).append("        ");
                 }
             }
-            if (EnvInfo.accountIdSet.contains(column)) {
-                buf.append(EnvInfo.account);
+            if (EnvInfo.ACCOUNT_ID_COLUMN_SET.contains(column)) {
+                buf.append(EnvInfo.ACCOUNT);
             } else {
                 buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             }
             i++;
         }
-        buf.append(" )").append(EnvInfo.newLine);
-        buf.append("    ").append("</insert>").append(EnvInfo.newLine);
+        buf.append(" )").append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</insert>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
@@ -325,8 +325,8 @@ public class SqlMapperMethodBuilder {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
-        buf.append(EnvInfo.newLine).append("    ").append("<update id=\"updateByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.newLine);
-        buf.append("        ").append("UPDATE ").append(tableName).append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<update id=\"updateByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("UPDATE ").append(tableName).append(EnvInfo.NEW_LINE);
         int i = 0;
         for (String column : columns) {
             if (tableInfo.getPrimaryKeys().contains(column)) {
@@ -338,30 +338,30 @@ public class SqlMapperMethodBuilder {
             if (i == 0) {
                 buf.append("        ").append("SET ");
             } else {
-                buf.append(",").append(EnvInfo.newLine).append("            ");
+                buf.append(",").append(EnvInfo.NEW_LINE).append("            ");
             }
             buf.append(caseColumn).append(" = ");
-            if (EnvInfo.accountIdSet.contains(column)) {
-                buf.append(EnvInfo.account);
+            if (EnvInfo.ACCOUNT_ID_COLUMN_SET.contains(column)) {
+                buf.append(EnvInfo.ACCOUNT);
             } else {
                 buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             }
             i++;
         }
-        buf.append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
         buf.append("        ").append("WHERE ");
         i = 0;
         for (String column : tableInfo.getPrimaryKeys()) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             if (i > 0) {
-                buf.append(EnvInfo.newLine).append("        ").append("AND ");
+                buf.append(EnvInfo.NEW_LINE).append("        ").append("AND ");
             }
             buf.append(caseDbSensitiveWords(column)).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
             i++;
         }
-        buf.append(EnvInfo.newLine);
-        buf.append("    ").append("</update>").append(EnvInfo.newLine);
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</update>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 

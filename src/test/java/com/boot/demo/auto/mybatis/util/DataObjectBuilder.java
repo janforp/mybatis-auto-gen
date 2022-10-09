@@ -34,23 +34,9 @@ class DataObjectBuilder {
         }
 
         buf.append(MyBatisGenUtils.getAuthorInfo());
-        buf.append("public class ").append(modalName).append(" implements java.io.Serializable {").append(newLine);
+        buf.append("public class ").append(modalName).append(" {").append(newLine);
         buf.append(newLine);
-        buf.append("    // Fields").append(newLine);
-        buf.append(newLine);
-        StringBuilder methods = new StringBuilder(2048);
-        StringBuilder constructors = new StringBuilder(2048);
-        StringBuilder constructorInners = new StringBuilder(1024);
-        constructors.append("    ").append("// Constructors").append(newLine);
-        {
-            // default constructor
-            constructors.append(newLine);
-            constructors.append("    ").append("/**").append(newLine);
-            constructors.append("    ").append(" * default constructor").append(newLine);
-            constructors.append("    ").append(" */").append(newLine);
-            constructors.append("    ").append("public ").append(modalName).append("() {").append(newLine);
-            constructors.append("    ").append("}").append(newLine);
-        }
+
         Map<String, String> columnCommentMap = tableInfo.getColumnCommentMap();
         int i = 0;
         int fullConstructorAddFieldIndex = 0;
@@ -66,68 +52,15 @@ class DataObjectBuilder {
             buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(newLine);
 
             if (i == 0) {
-                // 第一个属性
-                constructors.append(newLine);
-                constructors.append("    ").append("/**").append(newLine);
-                constructors.append("    ").append(" * full constructor").append(newLine);
-                constructors.append("    ").append(" */").append(newLine);
-                constructors.append("    ").append("public ").append(modalName).append("(");
-                methods.append("    ").append("// Property accessors").append(newLine);
+
             }
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
                 // 这个字段是主键,且是自增长,就不添加到full constructor
             } else {
-                constructorInners.append("        ").append("this.").append(propertyName).append(" = ").append(propertyName).append(";").append(newLine);
-                if (fullConstructorAddFieldIndex == 0) {
-                    constructors.append(javaType).append(" ").append(propertyName);
-                }
-                if (fullConstructorAddFieldIndex != 0) {
-                    constructors.append(", ").append(javaType).append(" ").append(propertyName);
-                }
-                fullConstructorAddFieldIndex++;
             }
-            {
-                methods.append(newLine);
-                if (comment != null) {
-                    methods.append("    ").append("/**").append(newLine);
-                    methods.append("    ").append(" * ").append(comment).append(newLine);
-                    methods.append("    ").append(" */").append(newLine);
-                }
-                methods.append("    ").append("public ").append(javaType).append(" get")
-                        .append(propertyNameInitCap)
-                        .append("() {").append(newLine);
 
-                methods.append("        ").append("return this.").append(propertyName).append(";")
-                        .append(newLine);
-
-                methods.append("    ").append("}").append(newLine);
-                methods.append(newLine);
-                if (comment != null) {
-                    methods.append("    ").append("/**").append(newLine);
-                    methods.append("    ").append(" * ").append(comment).append(newLine);
-                    methods.append("    ").append(" */").append(newLine);
-                }
-                methods.append("    ").append("public void set")
-                        .append(propertyNameInitCap)
-                        .append("(").append(javaType).append(" ").append(propertyName).append(
-                        ") {").append(newLine);
-                methods.append("        ").append("this.").append(propertyName).append(" = ")
-                        .append(propertyName).append(";")
-                        .append(newLine);
-                methods.append("    ").append("}").append(newLine);
-            }
-            if (i == tableInfo.getColumns().size() - 1) {
-                // 最后一个属性
-                constructors.append(") {").append(newLine);
-                constructors.append(constructorInners);
-                constructors.append("    ").append("}").append(newLine);
-            }
             i++;
         }
-        buf.append(newLine);
-        buf.append(constructors);
-        buf.append(newLine);
-        buf.append(methods);
         buf.append(newLine);
         buf.append("}");
         return buf.toString();

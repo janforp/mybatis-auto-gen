@@ -1,14 +1,11 @@
 package com.boot.demo.auto.mybatis.util;
 
-import com.boot.demo.auto.mybatis.MybatisCodeGenerateTest;
 import lombok.experimental.UtilityClass;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -96,8 +93,10 @@ class MyBatisGenUtils {
     }
 
     public static String getAuthorInfo() {
-        String newLine = "\n";
-        return "/**" + newLine + " * Created by " + MybatisCodeGenerateTest.class.getName() + " on " + new SimpleDateFormat("yyyy-MM-dd").format(new Date()) + newLine + " */" + newLine;
+        return "/**\n"
+                + "* @author zhucj\n"
+                + "* @since 20990909\n"
+                + "*/\n";
     }
 
     @SuppressWarnings("all")

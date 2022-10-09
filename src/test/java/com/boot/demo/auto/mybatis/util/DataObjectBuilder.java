@@ -21,7 +21,7 @@ class DataObjectBuilder {
         buf.append("package ").append(modalPackage).append(";").append(EnvInfo.NEW_LINE);
         buf.append(EnvInfo.NEW_LINE);
 
-        buf.append("import lombok.Data;").append(EnvInfo.NEW_LINE);
+        buf.append("import lombok.Data;").append(EnvInfo.NEW_LINE).append(EnvInfo.NEW_LINE);
 
         if (tableInfo.isImportUtil() || tableInfo.isImportSql() || tableInfo.isImportMath()) {
             if (tableInfo.isImportSql()) {

@@ -62,6 +62,8 @@ public class EnvInfo {
 
     public static final Set<String> ACCOUNT_ID_COLUMN_SET = Sets.newLinkedHashSet("creator_id", "modifier_id");
 
+    public static final Set<String> CREATE_UPDATE_DATE = Sets.newLinkedHashSet("create_date", "modify_date");
+
     public static String buildSourcePath() {
         String basePath = System.getProperty("user.dir");
         if (!basePath.endsWith(File.separator)) {

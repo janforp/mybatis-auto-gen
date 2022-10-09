@@ -1,5 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
+import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import lombok.experimental.UtilityClass;
 
 import java.io.File;
@@ -101,9 +102,9 @@ class MyBatisGenUtils {
 
     public static String getAuthorInfo() {
         return "/**\n"
-                + "* @author zhucj\n"
-                + "* @since 20990909\n"
-                + "*/\n";
+                + " * @author " + EnvInfo.AUTHOR + "\n"
+                + " * @since " + EnvInfo.VERSION + "\n"
+                + " */\n";
     }
 
     @SuppressWarnings("all")

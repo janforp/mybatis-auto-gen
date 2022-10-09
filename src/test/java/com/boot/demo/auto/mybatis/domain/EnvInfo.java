@@ -13,6 +13,10 @@ import java.util.Set;
  */
 public class EnvInfo {
 
+    public static final String VERSION = "20221027";
+
+    public static final String AUTHOR = "zhucj";
+
     public static final String SOURCE_PATH = "src/main/java/";
 
     public static final String SQLMAP_BASE_PATH = "src/main/resources/mapper/";
@@ -29,11 +33,7 @@ public class EnvInfo {
 
     public static final String NEW_LINE = "\n";
 
-    public static final Set<String> USE_DEFAULT_COLUMN_SET = Sets.newLinkedHashSet(
-            "is_delete",
-            "create_date",
-            "modify_date"
-    );
+    public static final Set<String> USE_DEFAULT_COLUMN_SET = Sets.newLinkedHashSet("is_delete", "create_date", "modify_date");
 
     /**
      * 创建人id字段
@@ -60,10 +60,7 @@ public class EnvInfo {
      */
     public static final boolean EXIST_CREATOR_ID = true;
 
-    public static final Set<String> ACCOUNT_ID_COLUMN_SET = Sets.newLinkedHashSet(
-            "creator_id",
-            "modifier_id"
-    );
+    public static final Set<String> ACCOUNT_ID_COLUMN_SET = Sets.newLinkedHashSet("creator_id", "modifier_id");
 
     public static String buildSourcePath() {
         String basePath = System.getProperty("user.dir");

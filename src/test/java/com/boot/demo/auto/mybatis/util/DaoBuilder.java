@@ -77,12 +77,12 @@ class DaoBuilder {
             buf.append("    ").append("void updateByPrimaryKeySelective(").append(modalName).append(" ").append(initCapModalName).append(");").append(newLine).append(newLine);
 
             buf.append("    /**\n" + "     * 根据主键修改\n" + "     *\n" + "     * @param ").append(initCapModalName).append(" 记录\n").append("     */").append(newLine);
-            buf.append("    ").append("void updateByPrimaryKey(").append(modalName).append(" ").append(initCapModalName).append(");").append(newLine);
+            buf.append("    ").append("void updateByPrimaryKey(").append(modalName).append(" ").append(initCapModalName).append(");").append(newLine).append(newLine);
         }
 
         // 查询
         {
-            buf.append("/**\n" + "     * 根据主键查询\n" + "     *\n" + "     * @param id 主键\n" + "     * @return 记录\n" + "     */").append(newLine);
+            buf.append("    /**\n" + "     * 根据主键查询\n" + "     *\n" + "     * @param id 主键\n" + "     * @return 记录\n" + "     */").append(newLine);
             buf.append("    ").append(modalName).append(" getById(");
             int i = 0;
             for (String column : primaryKeyList) {
@@ -94,7 +94,7 @@ class DaoBuilder {
                 buf.append(javaType).append(" ").append(propertyName);
                 i++;
             }
-            buf.append(");").append(newLine).append(newLine);
+            buf.append(");").append(newLine);
         }
 
         return buf.toString();

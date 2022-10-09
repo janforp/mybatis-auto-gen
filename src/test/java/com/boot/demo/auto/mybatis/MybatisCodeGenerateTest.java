@@ -39,7 +39,6 @@ public class MybatisCodeGenerateTest {
     private DruidDataSource dataSource;
 
     @Test
-    @SuppressWarnings("all")
     public void codeAutoGenerateTest() throws Exception {
         try {
             for (String tableName : tableNameSet) {

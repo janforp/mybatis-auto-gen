@@ -23,10 +23,12 @@ class DaoBuilder {
         buf.append("package ").append(daoPackage).append(";").append(newLine);
         buf.append(newLine);
         buf.append("import ").append(modalNameWithPackage).append(";").append(newLine);
+        buf.append("import org.springframework.stereotype.Repository;").append(newLine);
         buf.append(newLine);
         buf.append("import java.util.List;").append(newLine);
         buf.append(newLine);
         buf.append(MyBatisGenUtils.getAuthorInfo());
+        buf.append("@Repository").append(newLine);
         buf.append("public interface ").append(daoName).append(" {").append(newLine).append(newLine);
         // 方法
         buf.append(buildMethods(tableInfo));

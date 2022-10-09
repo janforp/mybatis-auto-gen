@@ -35,11 +35,6 @@ public class EnvInfo {
             "modify_date"
     );
 
-    public static final Set<String> ACCOUNT_ID_COLUMN_SET = Sets.newLinkedHashSet(
-            "creator_id",
-            "modifier_id"
-    );
-
     /**
      * 创建人id字段
      */
@@ -59,6 +54,16 @@ public class EnvInfo {
      * 是否存在修改人id
      */
     public static final boolean EXIST_MODIFIER_ID = true;
+
+    /**
+     * 是否存在创建人id
+     */
+    public static final boolean EXIST_CREATOR_ID = true;
+
+    public static final Set<String> ACCOUNT_ID_COLUMN_SET = Sets.newLinkedHashSet(
+            "creator_id",
+            "modifier_id"
+    );
 
     public static String buildSourcePath() {
         String basePath = System.getProperty("user.dir");

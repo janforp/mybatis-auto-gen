@@ -13,6 +13,13 @@ import java.util.List;
  */
 public class SqlMapperMethodBuilder {
 
+    private static boolean isAccountIdColumn(String column) {
+        if (EnvInfo.EXIST_CREATOR_ID && EnvInfo.CREATOR_ID.equals(column)) {
+            return true;
+        }
+        return EnvInfo.EXIST_MODIFIER_ID && EnvInfo.MODIFIER_ID.equals(column);
+    }
+
     public static String buildInsertSelective(TableInfo tableInfo, String modalName) {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
@@ -29,6 +36,12 @@ public class SqlMapperMethodBuilder {
             }
             String caseColumn = caseDbSensitiveWords(column);
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
+
+            if (isAccountIdColumn(column)) {
+                buf.append("            ").append(caseColumn).append(",").append(EnvInfo.NEW_LINE);
+                continue;
+            }
+
             boolean isPk = tableInfo.getPrimaryKeys().contains(column);
             if (!isPk) {
                 buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.NEW_LINE);
@@ -43,6 +56,7 @@ public class SqlMapperMethodBuilder {
         buf.append("        ").append("</trim>").append(EnvInfo.NEW_LINE);
         buf.append("        ").append("VALUES").append(EnvInfo.NEW_LINE);
         buf.append("        ").append("<trim prefix=\"(\" suffixOverrides=\",\" suffix=\")\">").append(EnvInfo.NEW_LINE);
+
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
                 // 主键是自增长的就不插入主键
@@ -50,6 +64,12 @@ public class SqlMapperMethodBuilder {
             }
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
+
+            if (isAccountIdColumn(column)) {
+                buf.append("            ").append(EnvInfo.ACCOUNT).append(",").append(EnvInfo.NEW_LINE);
+                continue;
+            }
+
             boolean isPk = tableInfo.getPrimaryKeys().contains(column);
             if (!isPk) {
                 buf.append("            ").append("<if test=\"").append(propertyName).append(" != null\">").append(EnvInfo.NEW_LINE);

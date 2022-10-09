@@ -75,7 +75,8 @@ public class SqlMapperMethodBuilder {
 
         // insertBatch
         buf.append(newLine).append("    ").append("<insert id=\"insertBatch\" parameterType=\"java.util.List\">").append(newLine);
-        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ");
+        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ").append(newLine);
+        buf.append("        ");
         int i = 0;
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
@@ -85,8 +86,8 @@ public class SqlMapperMethodBuilder {
             String caseColumn = caseDbSensitiveWords(column);
             if (i > 0) {
                 buf.append(", ");
-                if ((i + 2) % 3 == 0) {
-                    buf.append(newLine).append("          ");
+                if (i % 3 == 0) {
+                    buf.append(newLine).append("        ");
                 }
             }
             buf.append(caseColumn);
@@ -106,7 +107,7 @@ public class SqlMapperMethodBuilder {
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             if (i > 0) {
                 buf.append(", ");
-                if ((i + 2) % 3 == 0) {
+                if (i % 3 == 0) {
                     buf.append(newLine).append("            ");
                 }
             } else {
@@ -268,7 +269,7 @@ public class SqlMapperMethodBuilder {
             String caseColumn = caseDbSensitiveWords(column);
             if (i > 0) {
                 buf.append(", ");
-                if ((i + 2) % 3 == 0) {
+                if (i % 3 == 0) {
                     buf.append(newLine).append("        ");
                 }
             }
@@ -287,7 +288,7 @@ public class SqlMapperMethodBuilder {
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             if (i > 0) {
                 buf.append(", ");
-                if ((i + 2) % 3 == 0) {
+                if (i % 3 == 0) {
                     buf.append(newLine).append("        ");
                 }
             }

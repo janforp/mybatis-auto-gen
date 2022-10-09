@@ -40,6 +40,8 @@ public class EnvInfo {
             "modifier_id"
     );
 
+    public static String CREATOR_ID = "creator_id";
+
     public static String buildSourcePath() {
         String basePath = System.getProperty("user.dir");
         if (!basePath.endsWith(File.separator)) {

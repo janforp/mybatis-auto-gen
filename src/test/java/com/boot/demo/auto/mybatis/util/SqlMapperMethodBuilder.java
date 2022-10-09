@@ -147,6 +147,9 @@ public class SqlMapperMethodBuilder {
                 i++;
                 continue;
             }
+            if (EnvInfo.CREATOR_ID.equals(column)) {
+                continue;
+            }
             String caseColumn = caseDbSensitiveWords(column);
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
@@ -334,6 +337,9 @@ public class SqlMapperMethodBuilder {
         int i = 0;
         for (String column : columns) {
             if (tableInfo.getPrimaryKeys().contains(column)) {
+                continue;
+            }
+            if (EnvInfo.CREATOR_ID.equals(column)) {
                 continue;
             }
             String caseColumn = caseDbSensitiveWords(column);

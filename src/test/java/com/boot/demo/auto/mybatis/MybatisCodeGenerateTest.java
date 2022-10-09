@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.boot.demo.auto.mybatis.util.Builder;
+import org.apache.tomcat.util.buf.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,5 +38,6 @@ public class MybatisCodeGenerateTest {
                 dataSource.close();
             }
         }
+        System.out.println(StringUtils.join(tableNames) + " 生成完毕！");
     }
 }

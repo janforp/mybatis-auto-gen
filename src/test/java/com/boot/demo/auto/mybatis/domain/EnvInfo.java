@@ -13,8 +13,6 @@ import java.io.File;
 @Data
 public class EnvInfo {
 
-    private static String basePath = System.getProperty("user.dir");
-
     private String sourcePath = "src/main/java/";
 
     private String sqlmapBasePath = "src/main/resources/mapper/";
@@ -27,16 +25,9 @@ public class EnvInfo {
 
     private String daoPackage = "com.boot.demo.auto.dao";
 
-    private String modalFilePath;
-
-    private String daoFilePath;
-
-    private String sqlMapperFilePath;
-
-    private String customSqlMapperFilePath;
-
     public static String buildSourcePath() {
         EnvInfo envInfo = new EnvInfo();
+        String basePath = System.getProperty("user.dir");
         if (!basePath.endsWith(File.separator)) {
             basePath = basePath + File.separator;
         }
@@ -49,7 +40,7 @@ public class EnvInfo {
 
     public static String buildSqlmapBasePath() {
         EnvInfo envInfo = new EnvInfo();
-
+        String basePath = System.getProperty("user.dir");
         String sqlmapBasePath = basePath + File.separator + envInfo.getSqlmapBasePath();
         if (!sqlmapBasePath.endsWith(File.separator)) {
             sqlmapBasePath = sqlmapBasePath + File.separator;

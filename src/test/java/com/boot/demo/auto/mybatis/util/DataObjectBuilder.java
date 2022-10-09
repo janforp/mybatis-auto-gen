@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,7 +11,6 @@ import java.util.Map;
  * @author zhucj
  * @since 20220825
  */
-@SuppressWarnings("all")
 class DataObjectBuilder {
 
     static String buildModal(TableInfo tableInfo, String modalPackage) {
@@ -20,15 +20,17 @@ class DataObjectBuilder {
         buf.append("package ").append(modalPackage).append(";").append(newLine);
         buf.append(newLine);
 
+        buf.append("import lombok.Data;").append(newLine);
+
         if (tableInfo.isImportUtil() || tableInfo.isImportSql() || tableInfo.isImportMath()) {
             if (tableInfo.isImportSql()) {
                 buf.append("import java.sql.*;").append(newLine);
             }
             if (tableInfo.isImportUtil()) {
-                buf.append("import java.util.*;").append(newLine);
+                buf.append("import java.sql.Date;").append(newLine);
             }
             if (tableInfo.isImportMath()) {
-                buf.append("import java.math.*;").append(newLine);
+                buf.append("import java.math.BigDecimal;").append(newLine);
             }
             buf.append(newLine);
         }
@@ -38,31 +40,27 @@ class DataObjectBuilder {
         buf.append(newLine);
 
         Map<String, String> columnCommentMap = tableInfo.getColumnCommentMap();
-        int i = 0;
-        int fullConstructorAddFieldIndex = 0;
-        for (String column : tableInfo.getColumns()) {
+
+        List<String> columnList = tableInfo.getColumns();
+        for (String column : columnList) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
-            String propertyNameInitCap = MyBatisGenUtils.initCap(propertyName);
             String javaType = MyBatisGenUtils.getJavaTypeByJdbcType(tableInfo.getColumnTypes().get(column));
 
             String comment = columnCommentMap.get(column);
             if (comment != null) {
-                buf.append("    ").append("    /** ").append(newLine).append("         * ").append(comment).append(newLine).append("    */").append(newLine);
+                String buildComment = buildComment(comment);
+                buf.append("    ").append(buildComment);
             }
-            buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(newLine);
-
-            if (i == 0) {
-
-            }
-            if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
-                // 这个字段是主键,且是自增长,就不添加到full constructor
-            } else {
-            }
-
-            i++;
+            buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(newLine).append(newLine);
         }
         buf.append(newLine);
         buf.append("}");
         return buf.toString();
+    }
+
+    private static String buildComment(String comment) {
+        return "/**\n"
+                + "     * " + comment + "\n"
+                + "     */" + "\n";
     }
 }

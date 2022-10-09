@@ -21,7 +21,7 @@ public class EnvInfo {
 
     public static final String FILE_CHARSET = "utf-8";
 
-    public static final String DATA_OBJECT_PACKAGE = "com.boot.demo.auto.entity";
+    public static final String DATA_OBJECT_PACKAGE = "com.boot.demo.auto.dataobject";
 
     public static final String DAO_PACKAGE = "com.boot.demo.auto.dao";
 

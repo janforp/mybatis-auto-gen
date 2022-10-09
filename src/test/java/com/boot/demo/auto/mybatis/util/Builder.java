@@ -32,6 +32,9 @@ public class Builder {
         try (Connection conn = dataSource.getConnection()) {
             // 表信息
             TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfo.SCHEMA, oneTableName);
+
+            tableInfo.getColumns().removeAll(EnvInfo.USE_DEFAULT_COLUMN_SET);
+
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
                 System.err.println("[ERROR] " + oneTableName + " 没有主键，无法生成。");
                 return false;

@@ -22,11 +22,9 @@ class SqlMapperBuilder {
         {
             // BaseResultMap
             buf.append(SqlMapperMethodBuilder.buildResultMap(tableInfo, modalName));
-            // SELECT_All_Column
+            // BASE_All_COLUMN
             buf.append(SqlMapperMethodBuilder.buildBaseAllColumn(tableInfo));
         }
-
-        tableInfo.getColumns().removeAll(EnvInfo.USE_DEFAULT_COLUMN_SET);
 
         {
             // insert

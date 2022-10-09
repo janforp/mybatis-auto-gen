@@ -209,6 +209,9 @@ public class SqlMapperMethodBuilder {
         // BaseResultMap
         buf.append(EnvInfo.NEW_LINE).append("    ").append("<resultMap id=\"BaseResultMap\" type=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
         for (String column : columns) {
+            if (EnvInfo.ACCOUNT_ID_COLUMN_SET.contains(column)) {
+                continue;
+            }
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
             buf.append("        ");
@@ -217,6 +220,7 @@ public class SqlMapperMethodBuilder {
             } else {
                 buf.append("<result");
             }
+
             buf.append(" column=\"").append(column).append("\" property=\"").append(propertyName).append("\" jdbcType=\"").append(jdbcType).append("\"/>").append(EnvInfo.NEW_LINE);
         }
         buf.append("    ").append("</resultMap>").append(EnvInfo.NEW_LINE);

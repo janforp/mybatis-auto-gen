@@ -3,6 +3,7 @@ package com.boot.demo.auto.mybatis.util;
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -43,8 +44,12 @@ class DataObjectBuilder {
         Map<String, String> columnCommentMap = tableInfo.getColumnCommentMap();
 
         List<String> columnList = tableInfo.getColumns();
-        int size = columnList.size();
-        for (String column : columnList) {
+
+        List<String> cloneColumnList = new ArrayList<>(columnList);
+        cloneColumnList.removeAll(EnvInfo.ACCOUNT_ID_COLUMN_SET);
+
+        int size = cloneColumnList.size();
+        for (String column : cloneColumnList) {
             String propertyName = MyBatisGenUtils.underlineToCamel(column);
             String javaType = MyBatisGenUtils.getJavaTypeByJdbcType(tableInfo.getColumnTypes().get(column));
 

@@ -36,4 +36,6 @@ public class TableInfo {
 
     // 是否需要导入包java.math.*
     private boolean importMath = false;
+
+    private String tableComment;
 }

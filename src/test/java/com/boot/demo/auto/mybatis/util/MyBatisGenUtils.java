@@ -1,6 +1,7 @@
 package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
+import com.boot.demo.auto.mybatis.domain.TableInfo;
 import lombok.experimental.UtilityClass;
 
 import java.io.File;
@@ -100,8 +101,9 @@ class MyBatisGenUtils {
         return param.substring(0, 1).toLowerCase() + param.substring(1);
     }
 
-    public static String getAuthorInfo() {
+    public static String getAuthorInfo(TableInfo tableInfo) {
         return "/**\n"
+                + " * " + tableInfo.getTableComment() + "\n" + "\n"
                 + " * @author " + EnvInfo.AUTHOR + "\n"
                 + " * @since " + EnvInfo.VERSION + "\n"
                 + " */\n";

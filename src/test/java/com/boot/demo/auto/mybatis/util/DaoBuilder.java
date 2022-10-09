@@ -26,7 +26,7 @@ class DaoBuilder {
         buf.append(EnvInfo.NEW_LINE);
         buf.append("import java.util.List;").append(EnvInfo.NEW_LINE);
         buf.append(EnvInfo.NEW_LINE);
-        buf.append(MyBatisGenUtils.getAuthorInfo());
+        buf.append(MyBatisGenUtils.getAuthorInfo(tableInfo));
         buf.append("@Repository").append(EnvInfo.NEW_LINE);
         buf.append("public interface ").append(daoName).append(" {").append(EnvInfo.NEW_LINE).append(EnvInfo.NEW_LINE);
         // 方法

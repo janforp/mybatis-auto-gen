@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,12 +20,33 @@ import java.util.Map;
  */
 class TableInfoBuilder {
 
+    private static String getTableComment(Connection conn, String schema, String tableName) throws SQLException {
+        String sql = "SHOW create table " + schema + "." + tableName;
+        PreparedStatement preparedStatement = conn.prepareStatement(sql);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        String ddl = null;
+        while (resultSet.next()) {
+            ddl = resultSet.getString("Create Table");
+        }
+        if (ddl == null) {
+            return "";
+        }
+        int i = ddl.lastIndexOf("COMMENT=");
+        ddl = ddl.substring(i);
+        ddl = ddl.replace("COMMENT='", "");
+        ddl = ddl.replace("'", "");
+        return ddl;
+    }
+
     public static TableInfo getTableInfo(Connection conn, String schema, String tableName) {
+
         //查要生成实体类的表
         String sql = "SELECT * FROM " + schema + "." + tableName;
         PreparedStatement preparedStatement;
         TableInfo tableInfo;
         try {
+            String tableComment = getTableComment(conn, schema, tableName);
+
             preparedStatement = conn.prepareStatement(sql);
             ResultSetMetaData resultSetMetaData = preparedStatement.getMetaData();
 
@@ -105,6 +127,8 @@ class TableInfoBuilder {
             tableInfo.setPrimaryKeyAutoIncrement(primaryKeyAutoIncrement);
             tableInfo.setPrimaryKeys(primaryKeys);
             tableInfo.setColumnCommentMap(columnCommentMap);
+            tableInfo.setTableComment(tableComment);
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -36,7 +36,7 @@ class DataObjectBuilder {
             buf.append(EnvInfo.NEW_LINE);
         }
 
-        buf.append(MyBatisGenUtils.getAuthorInfo());
+        buf.append(MyBatisGenUtils.getAuthorInfo(tableInfo));
         buf.append("@Data").append(EnvInfo.NEW_LINE);
         buf.append("public class ").append(modalName).append(" {").append(EnvInfo.NEW_LINE);
         buf.append(EnvInfo.NEW_LINE);

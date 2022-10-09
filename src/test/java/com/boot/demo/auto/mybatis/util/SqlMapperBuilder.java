@@ -45,38 +45,34 @@ class SqlMapperBuilder {
         {
             // BaseResultMap
             buf.append(SqlMapperMethodBuilder.buildResultMap(tableInfo, modalName));
-        }
-        {
             // SELECT_All_Column
             buf.append(SqlMapperMethodBuilder.buildBaseAllColumn(tableInfo));
         }
+
         {
-            // getById
-            buf.append(SqlMapperMethodBuilder.buildGetById(tableInfo, modalName));
+            // insert
+            buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName));
+            // insertSelective
+            buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName));
+            // 批量添加
+            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo, modalName));
         }
+
         {
             // deleteByPrimaryKey
             buf.append(SqlMapperMethodBuilder.buildDeleteByPrimaryKey(tableInfo, modalName));
         }
         {
-            // insert
-            buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName));
-        }
-        {
-            // insertSelective
-            buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName));
-        }
-        {
-            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo, modalName));
-        }
-        {
             // updateByPrimaryKeySelective
             buf.append(SqlMapperMethodBuilder.buildUpdateByPrimaryKeySelective(tableInfo, modalName));
-        }
-        {
             // updateByPrimaryKey
             buf.append(SqlMapperMethodBuilder.buildUpdateByPrimaryKey(tableInfo, modalName));
         }
+        {
+            // getById
+            buf.append(SqlMapperMethodBuilder.buildGetById(tableInfo, modalName));
+        }
+
         buf.append("</mapper>");
         return buf.toString();
     }

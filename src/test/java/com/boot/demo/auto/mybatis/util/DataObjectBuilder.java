@@ -53,7 +53,6 @@ class DataObjectBuilder {
                 String buildComment = buildComment(comment);
                 buf.append("    ").append(buildComment);
             }
-            System.out.println(size + propertyName);
             size--;
             boolean lastProperty = size == 0;
             if (lastProperty) {

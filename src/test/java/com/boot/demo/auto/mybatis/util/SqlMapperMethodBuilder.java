@@ -64,15 +64,11 @@ public class SqlMapperMethodBuilder {
         }
         buf.append("        ").append("</trim>").append(newLine);
 
-        String selectKeyBuf = null;
-        if (selectKeyBuf != null && selectKeyBuf.length() > 0) {
-            buf.append(selectKeyBuf);
-        }
         buf.append("    ").append("</insert>").append(newLine);
         return buf.toString();
     }
 
-    public static String buildInsertBatch(TableInfo tableInfo, String modalName) {
+    public static String buildInsertBatch(TableInfo tableInfo) {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
@@ -259,10 +255,10 @@ public class SqlMapperMethodBuilder {
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
 
-        String selectKeyBuf = null;
         // insert
         buf.append(newLine).append("    ").append("<insert id=\"insert\" parameterType=\"").append(modalName).append("\">").append(newLine);
-        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ");
+        buf.append("        ").append("INSERT INTO ").append(tableName).append(" ( ").append(newLine);
+        buf.append("        ");
         int i = 0;
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
@@ -273,14 +269,14 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(", ");
                 if ((i + 2) % 3 == 0) {
-                    buf.append(newLine).append("          ");
+                    buf.append(newLine).append("        ");
                 }
             }
             buf.append(caseColumn);
             i++;
         }
         buf.append(" )").append(newLine);
-        buf.append("        ").append("VALUES ( ");
+        buf.append("        ").append("VALUES ( ").append(newLine).append("        ");
         i = 0;
         for (String column : columns) {
             if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().contains(column)) {
@@ -292,7 +288,7 @@ public class SqlMapperMethodBuilder {
             if (i > 0) {
                 buf.append(", ");
                 if ((i + 2) % 3 == 0) {
-                    buf.append(newLine).append("          ");
+                    buf.append(newLine).append("        ");
                 }
             }
             buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
@@ -313,7 +309,7 @@ public class SqlMapperMethodBuilder {
             selectKeyBufTmp.append("        ").append("<selectKey keyProperty=\"").append(propertyName).append("\" resultType=\"").append(javaType).append("\">").append(newLine);
             selectKeyBufTmp.append("            ").append("SELECT LAST_INSERT_ID() AS ").append(propertyName).append(newLine);
             selectKeyBufTmp.append("        ").append("</selectKey>").append(newLine);
-            selectKeyBuf = selectKeyBufTmp.toString();
+            String selectKeyBuf = selectKeyBufTmp.toString();
             buf.append(selectKeyBuf);
         }
         buf.append("    ").append("</insert>").append(newLine);

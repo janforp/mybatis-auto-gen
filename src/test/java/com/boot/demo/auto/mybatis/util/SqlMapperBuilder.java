@@ -55,7 +55,7 @@ class SqlMapperBuilder {
             // insertSelective
             buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName));
             // 批量添加
-            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo, modalName));
+            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo));
         }
 
         {

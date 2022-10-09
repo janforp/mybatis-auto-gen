@@ -13,7 +13,7 @@ import java.util.Map;
  */
 class DataObjectBuilder {
 
-    static String buildModal(TableInfo tableInfo, String modalPackage) {
+    static String buildDataObject(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String modalName = MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
         String newLine = "\n";

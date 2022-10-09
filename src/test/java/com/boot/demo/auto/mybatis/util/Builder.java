@@ -43,13 +43,13 @@ public class Builder {
                 if (new File(modalFilePath).exists()) {
                     System.err.println("[WARN] 实体类 " + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + " 已存在，将会覆盖。");
                 }
-                String modalSource = DataObjectBuilder.buildModal(tableInfo, modalPackage);
-                MyBatisGenUtils.writeText(new File(modalFilePath), modalSource, fileCharset);
+                String dataObject = DataObjectBuilder.buildDataObject(tableInfo, modalPackage);
+                MyBatisGenUtils.writeText(new File(modalFilePath), dataObject, fileCharset);
             }
 
             {
-                String sqlmapSource = SqlMapperBuilder.buildSqlMapper(tableInfo, modalPackage);
-                MyBatisGenUtils.writeText(new File(sqlMapperFilePath), sqlmapSource, fileCharset);
+                String mapperXml = SqlMapperBuilder.buildMapperXml(tableInfo, modalPackage);
+                MyBatisGenUtils.writeText(new File(sqlMapperFilePath), mapperXml, fileCharset);
             }
 
             {

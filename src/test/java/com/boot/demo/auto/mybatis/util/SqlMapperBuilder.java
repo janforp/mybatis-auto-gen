@@ -16,7 +16,7 @@ class SqlMapperBuilder {
 
     private static final String newLine = "\n";
 
-    public static String buildSqlMapper(TableInfo tableInfo, String modalPackage) {
+    public static String buildMapperXml(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());

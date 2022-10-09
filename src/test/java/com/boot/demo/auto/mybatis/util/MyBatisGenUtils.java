@@ -92,6 +92,13 @@ class MyBatisGenUtils {
         }
     }
 
+    public static String toCamel(String param) {
+        if (param == null || param.equals("")) {
+            return "";
+        }
+        return param.substring(0, 1).toLowerCase() + param.substring(1);
+    }
+
     public static String getAuthorInfo() {
         return "/**\n"
                 + "* @author zhucj\n"

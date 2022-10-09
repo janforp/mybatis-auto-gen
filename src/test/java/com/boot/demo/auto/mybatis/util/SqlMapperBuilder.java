@@ -78,7 +78,7 @@ class SqlMapperBuilder {
         }
         {
             // selectByPrimaryKey
-            buf.append("    ").append("<select id=\"selectByPrimaryKey\" resultMap=\"BaseResultMap\" parameterType=\"").append(modalName).append("\">").append(newLine);
+            buf.append("    ").append("<select id=\"getById\" resultMap=\"BaseResultMap\" parameterType=\"").append(modalName).append("\">").append(newLine);
             buf.append("        ").append("SELECT *").append(newLine);
             buf.append("        ").append("FROM ").append(tableName).append(newLine);
             buf.append("        ").append("WHERE ");

@@ -17,7 +17,7 @@ import java.util.Map;
  * @author zhucj
  * @since 20220825
  */
-public class TableInfoBuilder {
+class TableInfoBuilder {
 
     public static TableInfo getTableInfo(Connection conn, String schema, String tableName) {
         //查要生成实体类的表

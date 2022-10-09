@@ -12,7 +12,8 @@ import java.util.List;
  * @author zhucj
  * @since 20220825
  */
-public class SqlMapperBuilder {
+class SqlMapperBuilder {
+
     public static String buildSqlMapper(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();

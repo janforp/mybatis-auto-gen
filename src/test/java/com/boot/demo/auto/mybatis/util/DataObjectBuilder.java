@@ -11,9 +11,9 @@ import java.util.Map;
  * @since 20220825
  */
 @SuppressWarnings("all")
-public class DataObjectBuilder {
+class DataObjectBuilder {
 
-    public static String buildModal(TableInfo tableInfo, String modalPackage) {
+    static String buildModal(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String modalName = MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
         String newLine = "\n";

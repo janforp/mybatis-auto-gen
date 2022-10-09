@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * @since 20220825
  */
 @UtilityClass
-public class MyBatisGenUtils {
+class MyBatisGenUtils {
 
     public static String getJavaTypeByJdbcType(String jdbcType) {
         if (jdbcType.equalsIgnoreCase("int") || jdbcType.equalsIgnoreCase("integer") || jdbcType.equalsIgnoreCase("tinyint")) {

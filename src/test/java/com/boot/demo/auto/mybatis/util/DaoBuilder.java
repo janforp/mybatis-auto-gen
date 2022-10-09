@@ -8,9 +8,9 @@ import com.boot.demo.auto.mybatis.domain.TableInfo;
  * @author zhucj
  * @since 20220825
  */
-public class DaoBuilder {
+class DaoBuilder {
 
-    public static String buildDao(TableInfo tableInfo, String daoPackage, String modalPackage) {
+    static String buildDao(TableInfo tableInfo, String daoPackage, String modalPackage) {
         StringBuilder buf = new StringBuilder(1024);
         String tableName = tableInfo.getTableName();
         String daoName = MyBatisGenUtils.getDaoNameByTableName(tableName);

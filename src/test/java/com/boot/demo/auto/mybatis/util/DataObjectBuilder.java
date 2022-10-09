@@ -1,5 +1,6 @@
 package com.boot.demo.auto.mybatis.util;
 
+import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
 import java.util.List;
@@ -16,29 +17,28 @@ class DataObjectBuilder {
     static String buildDataObject(TableInfo tableInfo, String modalPackage) {
         StringBuilder buf = new StringBuilder(4096);
         String modalName = MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
-        String newLine = "\n";
-        buf.append("package ").append(modalPackage).append(";").append(newLine);
-        buf.append(newLine);
+        buf.append("package ").append(modalPackage).append(";").append(EnvInfo.newLine);
+        buf.append(EnvInfo.newLine);
 
-        buf.append("import lombok.Data;").append(newLine);
+        buf.append("import lombok.Data;").append(EnvInfo.newLine);
 
         if (tableInfo.isImportUtil() || tableInfo.isImportSql() || tableInfo.isImportMath()) {
             if (tableInfo.isImportSql()) {
-                buf.append("import java.sql.*;").append(newLine);
+                buf.append("import java.sql.*;").append(EnvInfo.newLine);
             }
             if (tableInfo.isImportUtil()) {
-                buf.append("import java.sql.Date;").append(newLine);
+                buf.append("import java.sql.Date;").append(EnvInfo.newLine);
             }
             if (tableInfo.isImportMath()) {
-                buf.append("import java.math.BigDecimal;").append(newLine);
+                buf.append("import java.math.BigDecimal;").append(EnvInfo.newLine);
             }
-            buf.append(newLine);
+            buf.append(EnvInfo.newLine);
         }
 
         buf.append(MyBatisGenUtils.getAuthorInfo());
-        buf.append("@Data").append(newLine);
-        buf.append("public class ").append(modalName).append(" {").append(newLine);
-        buf.append(newLine);
+        buf.append("@Data").append(EnvInfo.newLine);
+        buf.append("public class ").append(modalName).append(" {").append(EnvInfo.newLine);
+        buf.append(EnvInfo.newLine);
 
         Map<String, String> columnCommentMap = tableInfo.getColumnCommentMap();
 
@@ -59,10 +59,10 @@ class DataObjectBuilder {
             if (lastProperty) {
                 buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";");
             } else {
-                buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(newLine).append(newLine);
+                buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName).append(";").append(EnvInfo.newLine).append(EnvInfo.newLine);
             }
         }
-        buf.append(newLine);
+        buf.append(EnvInfo.newLine);
         buf.append("}");
         return buf.toString();
     }

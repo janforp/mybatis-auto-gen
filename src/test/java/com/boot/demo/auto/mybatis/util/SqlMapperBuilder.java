@@ -13,17 +13,14 @@ import java.util.Set;
  */
 class SqlMapperBuilder {
 
-    private static final String newLine = "\n";
-
     public static String buildMapperXml(TableInfo tableInfo, String modalPackage, Set<String> useDefaultColumnSet, Set<String> accountIdSet) {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
-        EnvInfo info = new EnvInfo();
-        String daoName = info.getDaoPackage() + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
-        buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(newLine);
-        buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(newLine);
-        buf.append("<mapper namespace=\"").append(daoName).append("\">").append(newLine);
+        String daoName = EnvInfo.daoPackage + "." + MyBatisGenUtils.getDaoNameByTableName(tableName);
+        buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(EnvInfo.newLine);
+        buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(EnvInfo.newLine);
+        buf.append("<mapper namespace=\"").append(daoName).append("\">").append(EnvInfo.newLine);
         {
             // BaseResultMap
             buf.append(SqlMapperMethodBuilder.buildResultMap(tableInfo, modalName));
@@ -37,9 +34,9 @@ class SqlMapperBuilder {
             // insert
             buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName, accountIdSet));
             // insertSelective
-            buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName));
+            buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName, accountIdSet));
             // 批量添加
-            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo));
+            buf.append(SqlMapperMethodBuilder.buildInsertBatch(tableInfo, accountIdSet));
         }
 
         {

@@ -17,13 +17,11 @@ import java.util.Set;
 public class Builder {
 
     public static boolean codegenForOneTable(String oneTableName, Set<String> useDefaultColumnSet, Set<String> accountIdSet, DataSource dataSource) throws Exception {
-        EnvInfo envInfo = new EnvInfo();
         String sourcePath = EnvInfo.buildSourcePath();
         String sqlmapBasePath = EnvInfo.buildSqlmapBasePath();
-        String schema = envInfo.getSchema();
-        String fileCharset = envInfo.getFileCharset();
-        String modalPackage = envInfo.getModalPackage();
-        String daoPackage = envInfo.getDaoPackage();
+        String fileCharset = EnvInfo.fileCharset;
+        String modalPackage = EnvInfo.modalPackage;
+        String daoPackage = EnvInfo.daoPackage;
 
         // dataObject
         String modalFilePath = sourcePath + modalPackage.replace(".", File.separator) + File.separator + MyBatisGenUtils.getMobalNameByTableName(oneTableName) + ".java";
@@ -34,7 +32,7 @@ public class Builder {
 
         try (Connection conn = dataSource.getConnection()) {
             // 表信息
-            TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, schema, oneTableName);
+            TableInfo tableInfo = TableInfoBuilder.getTableInfo(conn, EnvInfo.schema, oneTableName);
             if (tableInfo.getPrimaryKeys() == null || tableInfo.getPrimaryKeys().size() == 0) {
                 System.err.println("[ERROR] " + oneTableName + " 没有主键，无法生成。");
                 return false;

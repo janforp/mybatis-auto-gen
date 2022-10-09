@@ -25,22 +25,25 @@ class TableInfoBuilder {
 
     private static String getTableComment(Connection conn, String schema, String tableName) throws SQLException {
         String sql = "SHOW create table " + schema + "." + tableName;
-        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-        ResultSet resultSet = preparedStatement.executeQuery();
+        ResultSet resultSet;
         String ddl = null;
-        while (resultSet.next()) {
-            ddl = resultSet.getString("Create Table");
+        try (PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                ddl = resultSet.getString("Create Table");
+            }
+            if (ddl == null) {
+                return "";
+            }
+            int i = ddl.lastIndexOf("COMMENT=");
+            if (i == -1) {
+                return "";
+            }
+            ddl = ddl.substring(i);
+            ddl = ddl.replace("COMMENT='", "");
+            ddl = ddl.replace("'", "");
         }
-        if (ddl == null) {
-            return "";
-        }
-        int i = ddl.lastIndexOf("COMMENT=");
-        if (i == -1) {
-            return "";
-        }
-        ddl = ddl.substring(i);
-        ddl = ddl.replace("COMMENT='", "");
-        ddl = ddl.replace("'", "");
+
         return ddl;
     }
 

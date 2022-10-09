@@ -3,8 +3,7 @@ package com.boot.demo.auto.mybatis.util;
 import com.boot.demo.auto.mybatis.domain.EnvInfo;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 /**
  * SqlMapperBuilder
@@ -16,7 +15,7 @@ class SqlMapperBuilder {
 
     private static final String newLine = "\n";
 
-    public static String buildMapperXml(TableInfo tableInfo, String modalPackage) {
+    public static String buildMapperXml(TableInfo tableInfo, String modalPackage, Set<String> useDefaultColumnSet, Set<String> accountIdSet) {
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
         String modalName = modalPackage + "." + MyBatisGenUtils.getMobalNameByTableName(tableInfo.getTableName());
@@ -25,23 +24,6 @@ class SqlMapperBuilder {
         buf.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>").append(newLine);
         buf.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >").append(newLine);
         buf.append("<mapper namespace=\"").append(daoName).append("\">").append(newLine);
-        List<String> columns = tableInfo.getColumns();
-        int columnsSize = columns.size();
-        List<String> columnsIds = new ArrayList<>(columnsSize);
-        List<String> columnsNotIds = new ArrayList<>(columnsSize);
-        for (String column : columns) {
-            if (tableInfo.getPrimaryKeys().contains(column)) {
-                columnsIds.add(column);
-            } else {
-                columnsNotIds.add(column);
-            }
-        }
-        {
-            List<String> newColumnList = new ArrayList<>(columnsSize);
-            newColumnList.addAll(columnsIds);
-            newColumnList.addAll(columnsNotIds);
-            columns = newColumnList;
-        }
         {
             // BaseResultMap
             buf.append(SqlMapperMethodBuilder.buildResultMap(tableInfo, modalName));
@@ -49,9 +31,11 @@ class SqlMapperBuilder {
             buf.append(SqlMapperMethodBuilder.buildBaseAllColumn(tableInfo));
         }
 
+        tableInfo.getColumns().removeAll(useDefaultColumnSet);
+
         {
             // insert
-            buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName));
+            buf.append(SqlMapperMethodBuilder.buildInsert(tableInfo, modalName, accountIdSet));
             // insertSelective
             buf.append(SqlMapperMethodBuilder.buildInsertSelective(tableInfo, modalName));
             // 批量添加

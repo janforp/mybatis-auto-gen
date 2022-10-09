@@ -3,6 +3,7 @@ package com.boot.demo.auto.mybatis.util;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * SqlMapperMethodBuilder
@@ -11,6 +12,9 @@ import java.util.List;
  * @since 20220825
  */
 public class SqlMapperMethodBuilder {
+
+    // TODO 可以改
+    private static final String ACCOUNT = "'${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'";
 
     private static final String newLine = "\n";
 
@@ -251,7 +255,7 @@ public class SqlMapperMethodBuilder {
         return buf.toString();
     }
 
-    public static String buildInsert(TableInfo tableInfo, String modalName) {
+    public static String buildInsert(TableInfo tableInfo, String modalName, Set<String> accountIdSet) {
         StringBuilder buf = new StringBuilder(4096);
         List<String> columns = tableInfo.getColumns();
         String tableName = tableInfo.getTableName();
@@ -292,27 +296,14 @@ public class SqlMapperMethodBuilder {
                     buf.append(newLine).append("        ");
                 }
             }
-            buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            if (accountIdSet.contains(column)) {
+                buf.append(ACCOUNT);
+            } else {
+                buf.append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            }
             i++;
         }
         buf.append(" )").append(newLine);
-        if (tableInfo.isPrimaryKeyAutoIncrement() && tableInfo.getPrimaryKeys().size() == 1) {
-            StringBuilder selectKeyBufTmp = new StringBuilder();
-            // 主键是否是自增长(且只有一个主键)
-            String column = tableInfo.getPrimaryKeys().get(0);
-            String propertyName = MyBatisGenUtils.underlineToCamel(column);
-            String javaType = MyBatisGenUtils.getJavaTypeByJdbcType(tableInfo.getColumnTypes().get(column));
-            if ("Integer".equals(javaType)) {
-                javaType = "int";
-            } else {
-                javaType = javaType.toLowerCase();
-            }
-            selectKeyBufTmp.append("        ").append("<selectKey keyProperty=\"").append(propertyName).append("\" resultType=\"").append(javaType).append("\">").append(newLine);
-            selectKeyBufTmp.append("            ").append("SELECT LAST_INSERT_ID() AS ").append(propertyName).append(newLine);
-            selectKeyBufTmp.append("        ").append("</selectKey>").append(newLine);
-            String selectKeyBuf = selectKeyBufTmp.toString();
-            buf.append(selectKeyBuf);
-        }
         buf.append("    ").append("</insert>").append(newLine);
         return buf.toString();
     }

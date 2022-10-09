@@ -25,6 +25,7 @@ public class MybatisCodeGenerateTest {
     private static final String[] tableNames = new String[] { "ips_declaration_record", "cr_group" };
 
     @Test
+    @SuppressWarnings("all")
     public void codeAutoGenerateTest() throws Exception {
         try {
             for (String tableName : tableNames) {
@@ -36,6 +37,7 @@ public class MybatisCodeGenerateTest {
                 dataSource.close();
             }
         }
-        Assert.assertTrue(true);
+        boolean closed = dataSource.isClosed();
+        Assert.assertTrue(closed);
     }
 }

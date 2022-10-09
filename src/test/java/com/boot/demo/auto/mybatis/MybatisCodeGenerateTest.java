@@ -3,12 +3,15 @@ package com.boot.demo.auto.mybatis;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.boot.demo.auto.mybatis.util.Builder;
 import org.apache.tomcat.util.buf.StringUtils;
+import org.assertj.core.util.Sets;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Set;
 
 /**
  * 生成一张表的Modal / Dao / DaoImpl /sql**-mapper.xml
@@ -20,16 +23,26 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class MybatisCodeGenerateTest {
 
+    private static final Set<String> tableNameSet = Sets.newLinkedHashSet(
+            "cr_checklist",
+            "cr_group",
+            "cr_group_tester",
+            "cr_project",
+            "cr_project_tester",
+            "cr_question",
+            "cr_version_used_info",
+            "ips_declaration_record",
+            "ips_insurance_type_rule"
+    );
+
     @Autowired(required = false)
     private DruidDataSource dataSource;
-
-    private static final String[] tableNames = new String[] { "ips_declaration_record", "cr_group" };
 
     @Test
     @SuppressWarnings("all")
     public void codeAutoGenerateTest() throws Exception {
         try {
-            for (String tableName : tableNames) {
+            for (String tableName : tableNameSet) {
                 boolean codegen = Builder.codegenForOneTable(tableName, dataSource);
                 Assert.assertTrue(codegen);
             }
@@ -38,6 +51,6 @@ public class MybatisCodeGenerateTest {
                 dataSource.close();
             }
         }
-        System.out.println(StringUtils.join(tableNames) + " 生成完毕！");
+        System.out.println(StringUtils.join(tableNameSet) + " 生成完毕！");
     }
 }

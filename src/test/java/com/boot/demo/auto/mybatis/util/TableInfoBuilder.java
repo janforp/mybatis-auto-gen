@@ -36,8 +36,6 @@ class TableInfoBuilder {
             Map<String, String> columnCommentMap = new HashMap<>(size);
             // 是否需要导入包java.util.*
             boolean importUtil = false;
-            // 是否需要导入包java.sql.*
-            boolean importSql = false;
             // 是否需要导入包java.math.*
             boolean importMath = false;
             {
@@ -101,7 +99,7 @@ class TableInfoBuilder {
             tableInfo.setColumns(columns);
             tableInfo.setColumnTypes(columnTypes);
             tableInfo.setColumnSizes(columnSizes);
-            tableInfo.setImportSql(importSql);
+            tableInfo.setImportSql(false);
             tableInfo.setImportUtil(importUtil);
             tableInfo.setImportMath(importMath);
             tableInfo.setPrimaryKeyAutoIncrement(primaryKeyAutoIncrement);

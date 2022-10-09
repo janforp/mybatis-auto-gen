@@ -40,7 +40,25 @@ public class EnvInfo {
             "modifier_id"
     );
 
-    public static String CREATOR_ID = "creator_id";
+    /**
+     * 创建人id字段
+     */
+    public static final String CREATOR_ID = "creator_id";
+
+    /**
+     * 修改人id字段
+     */
+    public static final String MODIFIER_ID = "modifier_id";
+
+    /**
+     * 是否存在逻辑删除
+     */
+    public static final boolean EXIST_IS_DELETE = true;
+
+    /**
+     * 是否存在修改人id
+     */
+    public static final boolean EXIST_MODIFIER_ID = true;
 
     public static String buildSourcePath() {
         String basePath = System.getProperty("user.dir");

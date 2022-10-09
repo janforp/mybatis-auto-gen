@@ -180,6 +180,9 @@ public class SqlMapperMethodBuilder {
             i++;
         }
         buf.append(EnvInfo.NEW_LINE);
+        if (EnvInfo.EXIST_IS_DELETE) {
+            buf.append("        AND is_delete = 0").append(EnvInfo.NEW_LINE);
+        }
         buf.append("    ").append("</update>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
@@ -249,11 +252,50 @@ public class SqlMapperMethodBuilder {
             i++;
         }
         buf.append(EnvInfo.NEW_LINE);
+        if (EnvInfo.EXIST_IS_DELETE) {
+            buf.append("        AND is_delete = 0").append(EnvInfo.NEW_LINE);
+        }
         buf.append("    ").append("</select>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }
 
     public static String buildDeleteByPrimaryKey(TableInfo tableInfo, String modalName) {
+        if (EnvInfo.EXIST_IS_DELETE) {
+            return logicDelete(tableInfo, modalName);
+        } else {
+            return physicsDelete(tableInfo, modalName);
+        }
+    }
+
+    private static String logicDelete(TableInfo tableInfo, String modalName) {
+        // deleteByPrimaryKey
+        StringBuilder buf = new StringBuilder(4096);
+        String tableName = tableInfo.getTableName();
+        buf.append(EnvInfo.NEW_LINE).append("    ").append("<update id=\"deleteByPrimaryKey\" parameterType=\"").append(modalName).append("\">").append(EnvInfo.NEW_LINE);
+        buf.append("        ").append("UPDATE ").append(tableName).append(EnvInfo.NEW_LINE);
+        buf.append("        SET is_delete = id,").append(EnvInfo.NEW_LINE);
+        if (EnvInfo.EXIST_MODIFIER_ID) {
+            buf.append("        ");
+            buf.append(EnvInfo.MODIFIER_ID).append(" = ").append(EnvInfo.ACCOUNT).append(EnvInfo.NEW_LINE);
+        }
+        buf.append("        ").append("WHERE ");
+        int i = 0;
+        for (String column : tableInfo.getPrimaryKeys()) {
+            String propertyName = MyBatisGenUtils.underlineToCamel(column);
+            String jdbcType = getJdbcTypeByJdbcTypeForSqlMap(tableInfo.getColumnTypes().get(column));
+            if (i > 0) {
+                buf.append(EnvInfo.NEW_LINE).append("        ").append("AND ");
+            }
+            buf.append(caseDbSensitiveWords(column)).append(" = ").append("#{").append(propertyName).append(",jdbcType=").append(jdbcType).append("}");
+            i++;
+        }
+        buf.append(EnvInfo.NEW_LINE);
+        buf.append("        AND is_delete = 0").append(EnvInfo.NEW_LINE);
+        buf.append("    ").append("</update>").append(EnvInfo.NEW_LINE);
+        return buf.toString();
+    }
+
+    private static String physicsDelete(TableInfo tableInfo, String modalName) {
         // deleteByPrimaryKey
         StringBuilder buf = new StringBuilder(4096);
         String tableName = tableInfo.getTableName();
@@ -371,6 +413,9 @@ public class SqlMapperMethodBuilder {
             i++;
         }
         buf.append(EnvInfo.NEW_LINE);
+        if (EnvInfo.EXIST_IS_DELETE) {
+            buf.append("        AND is_delete = 0").append(EnvInfo.NEW_LINE);
+        }
         buf.append("    ").append("</update>").append(EnvInfo.NEW_LINE);
         return buf.toString();
     }

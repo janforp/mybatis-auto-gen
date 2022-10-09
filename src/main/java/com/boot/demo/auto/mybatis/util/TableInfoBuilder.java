@@ -2,6 +2,7 @@ package com.boot.demo.auto.mybatis.util;
 
 import com.boot.demo.auto.mybatis.domain.EnvInfoConstants;
 import com.boot.demo.auto.mybatis.domain.TableInfo;
+import javafx.util.Pair;
 import lombok.experimental.UtilityClass;
 
 import java.sql.Connection;
@@ -47,20 +48,14 @@ class TableInfoBuilder {
         return ddl;
     }
 
-    public static TableInfo getTableInfo(Connection conn, String schema, String tableName) throws SQLException {
+    private Pair<Boolean, Boolean> fillMetaData(Connection conn, String tableName, String schema, List<String> columns,
+            Map<String, String> columnCommentMap, Map<String, String> columnTypes, Map<String, Integer> columnSizes) throws SQLException {
 
-        //查要生成实体类的表
         String sql = "SELECT * FROM " + schema + "." + tableName;
-        TableInfo tableInfo;
         // 是否需要导入包java.util.*
         boolean importUtil = false;
         // 是否需要导入包java.math.*
         boolean importMath = false;
-        List<String> columns = new ArrayList<>();
-        Map<String, String> columnTypes = new HashMap<>();
-        Map<String, Integer> columnSizes = new HashMap<>();
-        Map<String, String> columnCommentMap = new HashMap<>();
-        String tableComment = getTableComment(conn, schema, tableName);
         ResultSetMetaData resultSetMetaData;
         try (PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
             resultSetMetaData = preparedStatement.getMetaData();
@@ -94,6 +89,23 @@ class TableInfoBuilder {
                 }
             }
         }
+        return new Pair<>(importUtil, importMath);
+    }
+
+    public static TableInfo getTableInfo(Connection conn, String schema, String tableName) throws SQLException {
+        //查要生成实体类的表
+        TableInfo tableInfo;
+        List<String> columns = new ArrayList<>();
+        Map<String, String> columnTypes = new HashMap<>();
+        Map<String, Integer> columnSizes = new HashMap<>();
+        Map<String, String> columnCommentMap = new HashMap<>();
+        String tableComment = getTableComment(conn, schema, tableName);
+
+        Pair<Boolean, Boolean> pair = fillMetaData(conn, tableName, schema, columns, columnCommentMap, columnTypes, columnSizes);
+        // 是否需要导入包java.util.*
+        boolean importUtil = pair.getKey();
+        // 是否需要导入包java.math.*
+        boolean importMath = pair.getValue();
 
         List<String> primaryKeys = new ArrayList<>();
         boolean primaryKeyAutoIncrement = false;
@@ -114,8 +126,8 @@ class TableInfoBuilder {
             // 有主键，且主键只有一个，才判断主键是否是自增长
             String selectPrimaryKeyAutoIncrementSql = "SELECT auto_increment FROM information_schema.TABLES WHERE table_name='" + tableName + "' and table_schema = '" + schema + "'";
             ResultSet resultSet;
-            try (PreparedStatement pStemt3 = conn.prepareStatement(selectPrimaryKeyAutoIncrementSql)) {
-                resultSet = pStemt3.executeQuery();
+            try (PreparedStatement prepareStatement = conn.prepareStatement(selectPrimaryKeyAutoIncrementSql)) {
+                resultSet = prepareStatement.executeQuery();
                 while (resultSet.next()) {
                     Object autoIncrementObj = resultSet.getObject("auto_increment");
                     if (autoIncrementObj != null) {

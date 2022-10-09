@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.File;
-
 /**
  * 生成一张表的Modal / Dao / DaoImpl /sql**-mapper.xml
  *
@@ -26,15 +24,9 @@ public class MybatisCodeGenerateTest {
 
     private static final String[] tableNames = new String[] { "ips_declaration_record", "cr_group" };
 
-    // 程序会自动找到basePath
-    private static String basePath = System.getProperty("user.dir");
-
     @Test
     public void codeAutoGenerateTest() throws Exception {
         try {
-            if (!basePath.endsWith(File.separator)) {
-                basePath = basePath + File.separator;
-            }
             for (String tableName : tableNames) {
                 Builder.codegenForOneTable(tableName, dataSource);
                 System.out.println(tableName + " - 生成完毕！");
@@ -46,5 +38,4 @@ public class MybatisCodeGenerateTest {
         }
         Assert.assertTrue(true);
     }
-
 }

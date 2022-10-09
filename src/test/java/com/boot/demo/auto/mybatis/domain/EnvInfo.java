@@ -37,7 +37,10 @@ public class EnvInfo {
 
     public static String buildSourcePath() {
         EnvInfo envInfo = new EnvInfo();
-        String sourcePath = basePath + File.separator + envInfo.getSourcePath();
+        if (!basePath.endsWith(File.separator)) {
+            basePath = basePath + File.separator;
+        }
+        String sourcePath = basePath + envInfo.getSourcePath();
         if (!sourcePath.endsWith(File.separator)) {
             sourcePath = sourcePath + File.separator;
         }

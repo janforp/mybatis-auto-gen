@@ -1,0 +1,85 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": [
+    {
+      "InstrumentID": "sn2302",
+      "Turnover": 11284220,
+      "BestAskPrice": 216960,
+      "BestAskPriceVolume": 2,
+      "BestBidPrice": 215310,
+      "BestBidPriceVolume": 4,
+      "LastPrice": 215300,
+      "UpDown": 0,
+      "OpenPrice": 216820,
+      "HighestPrice": 218000,
+      "LowestPrice": 214500,
+      "Volume": 52,
+      "OpenInterest": 2346,
+      "PreOpenInterest": 2370,
+      "Average": 217004.230769231,
+      "SettlementPrice": 0,
+      "PreSettlementPrice": 218230,
+      "UpperLimitPrice": 244410,
+      "LowerLimitPrice": 192040,
+      "PreClosePrice": 218140,
+      "TradingDay": "2023-02-13",
+      "Typename": "沪锡2302",
+      "TypenameEn": "sn2302",
+      "PretradingDay": "2023-02-10",
+      "LMEprice": {
+        "instrument_id": "SND",
+        "trading_day": "2023-02-10",
+        "open_price": 27615,
+        "close_price": 27270,
+        "highest_price": 27900,
+        "lowest_price": 27100
+      },
+      "Exchange": {
+        "Currency": "",
+        "Date": "",
+        "MidPrice": 0,
+        "XcBuyPrice": 0,
+        "XcSellPrice": 0,
+        "XhBuyPrice": 0,
+        "XhSellPrice": 0
+      },
+      "Productid": "",
+      "Itemid": "16",
+      "UpdateTime": "14:21:43",
+      "ActionDay": "2023-02-13",
+      "trade_unit": 1,
+      "price_unit": "元/吨",
+      "price_unit_en": "RMB/mt",
+      "trading_time": [
+        "21:00-24:00",
+        "00:00-01:00,09:00-10:15,10:30-11:30,13:30-15:00"
+      ],
+      "day_type": 0,
+      "trading_flag": true,
+      "arbitrage_info": null,
+      "jgjc_info": null,
+      "metal": "sn",
+      "category": "",
+      "show_flag": true,
+      "real_trading_day": "2023-02-13",
+      "arbi_hlb_calc": {
+        "shfe_price": 0,
+        "lme_price": 0,
+        "shfe_instrument_id": "",
+        "spot_id": "",
+        "calc_ref": ""
+      },
+      "instr_exchange": {
+        "trading_place": "shfe",
+        "trading_place_name": "上期所",
+        "trading_place_name_en": "SHFE",
+        "trading_place_name_all": "上海期货交易所",
+        "trading_place_name_en_all": "",
+        "is_cn": 1,
+        "is_virtual": 0,
+        "virtual_type": ""
+      }
+    }
+  ]
+}

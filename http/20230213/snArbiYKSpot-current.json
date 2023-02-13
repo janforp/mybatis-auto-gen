@@ -1,0 +1,101 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": [
+    {
+      "InstrumentID": "snArbiYKSpot",
+      "Turnover": 0,
+      "BestAskPrice": 0,
+      "BestAskPriceVolume": 0,
+      "BestBidPrice": 0,
+      "BestBidPriceVolume": 0,
+      "LastPrice": 1732.7251384750125,
+      "UpDown": 0,
+      "OpenPrice": 492.0493579999893,
+      "HighestPrice": 2511.987697554985,
+      "LowestPrice": -1317.4463927599718,
+      "Volume": 0,
+      "OpenInterest": 0,
+      "PreOpenInterest": 0,
+      "Average": 0,
+      "SettlementPrice": 1352.905082029989,
+      "PreSettlementPrice": 1352.905082029989,
+      "UpperLimitPrice": 0,
+      "LowerLimitPrice": 0,
+      "PreClosePrice": 1352.905082029989,
+      "TradingDay": "2023-02-13",
+      "Typename": "沪锡现货",
+      "TypenameEn": "Tin import arbitrage(Spot)",
+      "PretradingDay": "2023-02-10",
+      "LMEprice": {
+        "instrument_id": "",
+        "trading_day": "",
+        "open_price": 0,
+        "close_price": 0,
+        "highest_price": 0,
+        "lowest_price": 0
+      },
+      "Exchange": {
+        "Currency": "",
+        "Date": "",
+        "MidPrice": 0,
+        "XcBuyPrice": 0,
+        "XcSellPrice": 0,
+        "XhBuyPrice": 0,
+        "XhSellPrice": 0
+      },
+      "Productid": "",
+      "Itemid": "16",
+      "UpdateTime": "14:23:55",
+      "ActionDay": "2023-02-13",
+      "trade_unit": 1,
+      "price_unit": "元/吨",
+      "price_unit_en": "RMB/mt",
+      "trading_time": [
+        "21:00-24:00",
+        "00:00-01:00,09:00-10:15,10:30-11:30,13:30-15:00"
+      ],
+      "day_type": 0,
+      "trading_flag": true,
+      "arbitrage_info": {
+        "lme_instr": "LME_SN_3M",
+        "lme_price": 27110,
+        "instr": "sn2303",
+        "shfe_price": 216120,
+        "index": 6.8265,
+        "arbi_item": {
+          "premium": 200,
+          "import_premium": 75,
+          "fax": -193.5,
+          "import_tax": 0.03,
+          "rufax": 130,
+          "carriage": 0
+        },
+        "sgx_instr": "SGX_UC_2302",
+        "sgx_price": 6.837
+      },
+      "jgjc_info": null,
+      "metal": "snArbi",
+      "category": "Arbi",
+      "show_flag": true,
+      "real_trading_day": "2023-02-13",
+      "arbi_hlb_calc": {
+        "shfe_price": 216120,
+        "lme_price": 27110,
+        "shfe_instrument_id": "sn2303",
+        "spot_id": "",
+        "calc_ref": ";ClosePrice::{\"arbi_type\":\"yk_spot\",\"price\":216120,\"lme\":27110,\"swap\":-193.5,\"premium\":200,\"import_premium\":75,\"index\":6.8265,\"tax\":0.13,\"tariff\":0.03,\"charges\":130,\"sgx_price\":6.8265,\"sgx_instr\":\"SGX_UC_2303\",\"month\":2,\"arbi_instr\":\"snArbiYKSpot\",\"contract\":\"Spot\",\"lme_instr\":\"LME_SN_3M\",\"up_map_time\":\"2023-02-13 14:23:03\"  };LastPrice::{\"arbi_type\":\"yk_spot\",\"price\":216120,\"lme\":27110,\"swap\":-193.5,\"premium\":200,\"import_premium\":75,\"index\":6.8265,\"tax\":0.13,\"tariff\":0.03,\"charges\":130,\"sgx_price\":6.8265,\"sgx_instr\":\"SGX_UC_2303\",\"month\":2,\"arbi_instr\":\"snArbiYKSpot\",\"contract\":\"Spot\",\"lme_instr\":\"LME_SN_3M\",\"up_map_time\":\"2023-02-13 14:23:03\"  }"
+      },
+      "instr_exchange": {
+        "trading_place": "arbitrage",
+        "trading_place_name": "盈亏/套利",
+        "trading_place_name_en": "",
+        "trading_place_name_all": "盈亏/套利",
+        "trading_place_name_en_all": "",
+        "is_cn": 1,
+        "is_virtual": 1,
+        "virtual_type": "Arbi"
+      }
+    }
+  ]
+}

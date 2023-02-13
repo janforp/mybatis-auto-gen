@@ -1,0 +1,3983 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "data": [
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:30:00",
+        "LastPrice": 216820,
+        "Volume": 0,
+        "VolumeTotal": 2,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 433640,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:31:00",
+        "LastPrice": 216820,
+        "Volume": 0,
+        "VolumeTotal": 2,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 433640,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:32:00",
+        "LastPrice": 216820,
+        "Volume": 0,
+        "VolumeTotal": 2,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 433640,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:33:00",
+        "LastPrice": 216820,
+        "Volume": 0,
+        "VolumeTotal": 2,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 433640,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:34:00",
+        "LastPrice": 216820,
+        "Volume": 0,
+        "VolumeTotal": 2,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 433640,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:35:00",
+        "LastPrice": 216820,
+        "Volume": 0,
+        "VolumeTotal": 2,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 433640,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:36:00",
+        "LastPrice": 217760,
+        "Volume": 2,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:37:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:38:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:39:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:40:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:41:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:42:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:43:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:44:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:45:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:46:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:47:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:48:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:49:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:50:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:51:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:52:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:53:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:54:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:55:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:56:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:57:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:58:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 00:59:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-11 01:00:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:00:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:01:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:02:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:03:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:04:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:05:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:06:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:07:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:08:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:09:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:10:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:11:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:12:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:13:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:14:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:15:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:16:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:17:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:18:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:19:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:20:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:21:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:22:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:23:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:24:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:25:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:26:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:27:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:28:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:29:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:30:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:31:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:32:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:33:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:34:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:35:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:36:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:37:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:38:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:39:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:40:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:41:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:42:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:43:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:44:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:45:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:46:00",
+        "LastPrice": 217760,
+        "Volume": 0,
+        "VolumeTotal": 4,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 869160,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:47:00",
+        "LastPrice": 217140,
+        "Volume": 2,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:48:00",
+        "LastPrice": 217140,
+        "Volume": 0,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:49:00",
+        "LastPrice": 217140,
+        "Volume": 0,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:50:00",
+        "LastPrice": 217140,
+        "Volume": 0,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:51:00",
+        "LastPrice": 217140,
+        "Volume": 0,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:52:00",
+        "LastPrice": 217140,
+        "Volume": 0,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:53:00",
+        "LastPrice": 217140,
+        "Volume": 0,
+        "VolumeTotal": 6,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 1303440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:54:00",
+        "LastPrice": 218000,
+        "Volume": 4,
+        "VolumeTotal": 10,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 2175440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:55:00",
+        "LastPrice": 218000,
+        "Volume": 6,
+        "VolumeTotal": 16,
+        "OpenInterest": 2372,
+        "PreSettlementPrice": 218230,
+        "Turnover": 3483440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:56:00",
+        "LastPrice": 218000,
+        "Volume": 6,
+        "VolumeTotal": 22,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 4791440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:57:00",
+        "LastPrice": 218000,
+        "Volume": 0,
+        "VolumeTotal": 22,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 4791440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:58:00",
+        "LastPrice": 218000,
+        "Volume": 0,
+        "VolumeTotal": 22,
+        "OpenInterest": 2370,
+        "PreSettlementPrice": 218230,
+        "Turnover": 4791440,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 09:59:00",
+        "LastPrice": 217900,
+        "Volume": 16,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:00:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:01:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:02:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:03:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:04:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:05:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:06:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:07:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:08:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:09:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:10:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:11:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:12:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:13:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:14:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:15:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:30:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:31:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:32:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:33:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:34:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:35:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:36:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:37:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:38:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:39:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:40:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:41:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:42:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:43:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:44:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:45:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:46:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:47:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:48:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:49:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:50:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:51:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:52:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:53:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:54:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:55:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:56:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:57:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:58:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 10:59:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:00:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:01:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:02:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:03:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:04:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:05:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:06:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:07:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:08:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:09:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:10:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:11:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:12:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:13:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:14:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:15:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:16:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:17:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:18:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:19:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:20:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:21:00",
+        "LastPrice": 217900,
+        "Volume": 0,
+        "VolumeTotal": 38,
+        "OpenInterest": 2358,
+        "PreSettlementPrice": 218230,
+        "Turnover": 8277840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:22:00",
+        "LastPrice": 214500,
+        "Volume": 10,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:23:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:24:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:25:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:26:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:27:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:28:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:29:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 11:30:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:30:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:31:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:32:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:33:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:34:00",
+        "LastPrice": 214500,
+        "Volume": 0,
+        "VolumeTotal": 48,
+        "OpenInterest": 2348,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10422840,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:35:00",
+        "LastPrice": 215390,
+        "Volume": 2,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:36:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:37:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:38:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:39:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:40:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:41:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:42:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:43:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:44:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:45:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:46:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:47:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:48:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:49:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:50:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:51:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:52:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:53:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:54:00",
+        "LastPrice": 215390,
+        "Volume": 0,
+        "VolumeTotal": 50,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 10853620,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:55:00",
+        "LastPrice": 215300,
+        "Volume": 2,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:56:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:57:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:58:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 13:59:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:00:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:01:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:02:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:03:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:04:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:05:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:06:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:07:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:08:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:09:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:10:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:11:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:12:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:13:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:14:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:15:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:16:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:17:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:18:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:19:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      },
+      {
+        "InstrumentId": "sn2302",
+        "UpdateTime": "2023-02-13 14:20:00",
+        "LastPrice": 215300,
+        "Volume": 0,
+        "VolumeTotal": 52,
+        "OpenInterest": 2346,
+        "PreSettlementPrice": 218230,
+        "Turnover": 11284220,
+        "trading_day": "2023-02-13",
+        "arbi_hlb_calc": {
+          "shfe_price": 0,
+          "lme_price": 0,
+          "shfe_instrument_id": "",
+          "spot_id": "",
+          "calc_ref": ""
+        }
+      }
+    ],
+    "tradingday": "2023-02-13",
+    "trading_time": [
+      "21:00-24:00",
+      "00:00-01:00,09:00-10:15,10:30-11:30,13:30-15:00"
+    ],
+    "degrees": "",
+    "scales": [
+      {
+        "position": "21:00",
+        "show": "21:00",
+        "dashed_line": 0
+      },
+      {
+        "position": "09:00",
+        "show": "01:00/09:00",
+        "dashed_line": 0
+      },
+      {
+        "position": "13:30",
+        "show": "11:30/13:30",
+        "dashed_line": 0
+      },
+      {
+        "position": "15:00",
+        "show": "15:00",
+        "dashed_line": 0
+      }
+    ],
+    "trade_unit": 1,
+    "day_type": 0,
+    "trading_flag": true,
+    "pre_settlement_price": 218230,
+    "pre_close_price": 218140
+  }
+}

@@ -34,7 +34,7 @@ public class MybatisCodeGenerateTest {
             //            "cr_question",
             //            "cr_version_used_info",
             //            "ips_declaration_record",
-            "ips_insurance_type_rule"
+            "cr_codereview"
     );
 
     @Autowired(required = false)

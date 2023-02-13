@@ -1,0 +1,22 @@
+#author zhucj
+#since 20200623
+
+GET https://platform.smm.cn/quotecenter/instrument/sn2302/timeline
+
+###
+
+GET https://platform.smm.cn/quotecenter/instrument/sn2302/current
+
+
+###
+
+GET https://platform.smm.cn/quotecenter/instrument/snArbiYKSpot/timeline
+
+
+###
+
+GET https://platform.smm.cn/quotecenter/instrument/snArbiYKSpot/current
+
+###
+
+GET http://127.0.0.1:8080/tin/get

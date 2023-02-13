@@ -20,3 +20,7 @@ GET https://platform.smm.cn/quotecenter/instrument/snArbiYKSpot/current
 ###
 
 GET http://127.0.0.1:8080/tin/get
+
+###
+
+GET http://127.0.0.1:8080/tin/getFromPhone

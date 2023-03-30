@@ -23,7 +23,7 @@ import java.util.Map;
  * @since 20230323
  */
 @UtilityClass
-public class ExportPdf {
+public class LocalTemplateExportPdf {
 
     /**
      * 通过模板导出pdf文件
@@ -53,7 +53,7 @@ public class ExportPdf {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_0);
         configuration.setDefaultEncoding(Constant.UTF_8);
         // 指定FreeMarker模板文件的位置
-        configuration.setClassForTemplateLoading(ExportPdf.class, basePackagePath);
+        configuration.setClassForTemplateLoading(LocalTemplateExportPdf.class, basePackagePath);
         // 设置模板的编码格式
         configuration.setEncoding(Locale.CHINA, Constant.UTF_8);
         // 获取模板文件

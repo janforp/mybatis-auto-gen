@@ -2,7 +2,7 @@ package com.boot.demo.auto.controller;
 
 import com.boot.demo.auto.common.BusinessException;
 import com.boot.demo.auto.common.Constant;
-import com.boot.demo.auto.freemark.pdf.ExportPdf;
+import com.boot.demo.auto.freemark.pdf.LocalTemplateExportPdf;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,7 +41,7 @@ public class FreeMarkController {
             // reportList自己加测试数据
             map.put("reportList", new ArrayList<>());
             // 生成pdf
-            out = ExportPdf.createPdf(map, "test.ftl", "/templates");
+            out = LocalTemplateExportPdf.createPdf(map, "test.ftl", "/templates");
             bytes = out.toByteArray();
             headers = new HttpHeaders();
             headers.add("Content-Disposition", "attachment; filename=" + URLEncoder.encode("测试.pdf", Constant.UTF_8));

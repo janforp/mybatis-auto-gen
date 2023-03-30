@@ -11,4 +11,6 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class PdfGenerator {
 
+    public static void pdf() {
+    }
 }

@@ -1,6 +1,7 @@
 package com.boot.demo.auto.controller;
 
 import com.boot.demo.auto.common.ApiResponse;
+import com.boot.demo.auto.freemark.pdf.PdfGenerator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class FreeMarkController {
 
     @GetMapping("/pdf")
-    public ApiResponse<String> pdf() {
-        return ApiResponse.success("");
+    public ApiResponse<Boolean> pdf() {
+        PdfGenerator.pdf();
+        return ApiResponse.success(true);
     }
 }

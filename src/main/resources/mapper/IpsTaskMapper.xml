@@ -9,8 +9,8 @@
         <result column="request_id" property="requestId" jdbcType="VARCHAR"/>
         <result column="task_type" property="taskType" jdbcType="VARCHAR"/>
         <result column="state" property="state" jdbcType="VARCHAR"/>
-        <result column="result_json" property="resultJson" jdbcType="VARCHAR"/>
-        <result column="param_json" property="paramJson" jdbcType="VARCHAR"/>
+        <result column="result_json" property="resultJson" jdbcType="TEXT"/>
+        <result column="param_json" property="paramJson" jdbcType="TEXT"/>
         <result column="result_code" property="resultCode" jdbcType="VARCHAR"/>
         <result column="result_message" property="resultMessage" jdbcType="VARCHAR"/>
     </resultMap>
@@ -29,8 +29,8 @@
         creator_id, modifier_id )
         VALUES (
         #{customerId,jdbcType=BIGINT}, #{deptId,jdbcType=BIGINT}, #{requestId,jdbcType=VARCHAR},
-        #{taskType,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{resultJson,jdbcType=VARCHAR},
-        #{paramJson,jdbcType=VARCHAR}, #{resultCode,jdbcType=VARCHAR}, #{resultMessage,jdbcType=VARCHAR},
+        #{taskType,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{resultJson,jdbcType=TEXT},
+        #{paramJson,jdbcType=TEXT}, #{resultCode,jdbcType=VARCHAR}, #{resultMessage,jdbcType=VARCHAR},
         '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}', '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}' )
     </insert>
 
@@ -85,10 +85,10 @@
                 #{state,jdbcType=VARCHAR},
             </if>
             <if test="resultJson != null">
-                #{resultJson,jdbcType=VARCHAR},
+                #{resultJson,jdbcType=TEXT},
             </if>
             <if test="paramJson != null">
-                #{paramJson,jdbcType=VARCHAR},
+                #{paramJson,jdbcType=TEXT},
             </if>
             <if test="resultCode != null">
                 #{resultCode,jdbcType=VARCHAR},
@@ -111,8 +111,8 @@
         <foreach collection="list" item="item" index="index" separator=",">
             (
             #{item.customerId,jdbcType=BIGINT}, #{item.deptId,jdbcType=BIGINT}, #{item.requestId,jdbcType=VARCHAR},
-            #{item.taskType,jdbcType=VARCHAR}, #{item.state,jdbcType=VARCHAR}, #{item.resultJson,jdbcType=VARCHAR},
-            #{item.paramJson,jdbcType=VARCHAR}, #{item.resultCode,jdbcType=VARCHAR}, #{item.resultMessage,jdbcType=VARCHAR},
+            #{item.taskType,jdbcType=VARCHAR}, #{item.state,jdbcType=VARCHAR}, #{item.resultJson,jdbcType=TEXT},
+            #{item.paramJson,jdbcType=TEXT}, #{item.resultCode,jdbcType=VARCHAR}, #{item.resultMessage,jdbcType=VARCHAR},
             '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}', '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
             )
         </foreach>
@@ -145,10 +145,10 @@
                 state = #{state,jdbcType=VARCHAR},
             </if>
             <if test="resultJson != null">
-                result_json = #{resultJson,jdbcType=VARCHAR},
+                result_json = #{resultJson,jdbcType=TEXT},
             </if>
             <if test="paramJson != null">
-                param_json = #{paramJson,jdbcType=VARCHAR},
+                param_json = #{paramJson,jdbcType=TEXT},
             </if>
             <if test="resultCode != null">
                 result_code = #{resultCode,jdbcType=VARCHAR},
@@ -169,8 +169,8 @@
         request_id = #{requestId,jdbcType=VARCHAR},
         task_type = #{taskType,jdbcType=VARCHAR},
         state = #{state,jdbcType=VARCHAR},
-        result_json = #{resultJson,jdbcType=VARCHAR},
-        param_json = #{paramJson,jdbcType=VARCHAR},
+        result_json = #{resultJson,jdbcType=TEXT},
+        param_json = #{paramJson,jdbcType=TEXT},
         result_code = #{resultCode,jdbcType=VARCHAR},
         result_message = #{resultMessage,jdbcType=VARCHAR},
         modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'

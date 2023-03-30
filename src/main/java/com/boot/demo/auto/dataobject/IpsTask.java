@@ -4,7 +4,6 @@ import lombok.Data;
 
 /**
  * 任务表
- *
  * @author zhucj
  * @since 20221027
  */

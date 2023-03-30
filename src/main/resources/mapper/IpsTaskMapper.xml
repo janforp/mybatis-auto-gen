@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.IpsTaskDAO">
+
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.dataobject.IpsTask">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="customer_id" property="customerId" jdbcType="BIGINT"/>
+        <result column="dept_id" property="deptId" jdbcType="BIGINT"/>
+        <result column="request_id" property="requestId" jdbcType="VARCHAR"/>
+        <result column="task_type" property="taskType" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="result_json" property="resultJson" jdbcType="VARCHAR"/>
+        <result column="param_json" property="paramJson" jdbcType="VARCHAR"/>
+        <result column="result_code" property="resultCode" jdbcType="VARCHAR"/>
+        <result column="result_message" property="resultMessage" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="BASE_All_COLUMN">
+        id, customer_id, dept_id, request_id, task_type,
+        state, result_json, param_json, result_code, result_message,
+        creator_id, modifier_id
+    </sql>
+
+    <insert id="insert" parameterType="com.boot.demo.auto.dataobject.IpsTask">
+        INSERT INTO ips_task (
+        customer_id, dept_id, request_id,
+        task_type, state, result_json,
+        param_json, result_code, result_message,
+        creator_id, modifier_id )
+        VALUES (
+        #{customerId,jdbcType=BIGINT}, #{deptId,jdbcType=BIGINT}, #{requestId,jdbcType=VARCHAR},
+        #{taskType,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{resultJson,jdbcType=VARCHAR},
+        #{paramJson,jdbcType=VARCHAR}, #{resultCode,jdbcType=VARCHAR}, #{resultMessage,jdbcType=VARCHAR},
+        '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}', '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}' )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.dataobject.IpsTask">
+        INSERT INTO ips_task
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="deptId != null">
+                dept_id,
+            </if>
+            <if test="requestId != null">
+                request_id,
+            </if>
+            <if test="taskType != null">
+                task_type,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+            <if test="resultJson != null">
+                result_json,
+            </if>
+            <if test="paramJson != null">
+                param_json,
+            </if>
+            <if test="resultCode != null">
+                result_code,
+            </if>
+            <if test="resultMessage != null">
+                result_message,
+            </if>
+            creator_id,
+            modifier_id,
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="customerId != null">
+                #{customerId,jdbcType=BIGINT},
+            </if>
+            <if test="deptId != null">
+                #{deptId,jdbcType=BIGINT},
+            </if>
+            <if test="requestId != null">
+                #{requestId,jdbcType=VARCHAR},
+            </if>
+            <if test="taskType != null">
+                #{taskType,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                #{state,jdbcType=VARCHAR},
+            </if>
+            <if test="resultJson != null">
+                #{resultJson,jdbcType=VARCHAR},
+            </if>
+            <if test="paramJson != null">
+                #{paramJson,jdbcType=VARCHAR},
+            </if>
+            <if test="resultCode != null">
+                #{resultCode,jdbcType=VARCHAR},
+            </if>
+            <if test="resultMessage != null">
+                #{resultMessage,jdbcType=VARCHAR},
+            </if>
+            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+        </trim>
+    </insert>
+
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO ips_task (
+        customer_id, dept_id, request_id,
+        task_type, state, result_json,
+        param_json, result_code, result_message,
+        creator_id, modifier_id )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.customerId,jdbcType=BIGINT}, #{item.deptId,jdbcType=BIGINT}, #{item.requestId,jdbcType=VARCHAR},
+            #{item.taskType,jdbcType=VARCHAR}, #{item.state,jdbcType=VARCHAR}, #{item.resultJson,jdbcType=VARCHAR},
+            #{item.paramJson,jdbcType=VARCHAR}, #{item.resultCode,jdbcType=VARCHAR}, #{item.resultMessage,jdbcType=VARCHAR},
+            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}', '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+            )
+        </foreach>
+    </insert>
+
+    <update id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.dataobject.IpsTask">
+        UPDATE ips_task
+        SET is_delete = id,
+        modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </update>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.dataobject.IpsTask">
+        UPDATE ips_task
+        <set>
+            <if test="customerId != null">
+                customer_id = #{customerId,jdbcType=BIGINT},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId,jdbcType=BIGINT},
+            </if>
+            <if test="requestId != null">
+                request_id = #{requestId,jdbcType=VARCHAR},
+            </if>
+            <if test="taskType != null">
+                task_type = #{taskType,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                state = #{state,jdbcType=VARCHAR},
+            </if>
+            <if test="resultJson != null">
+                result_json = #{resultJson,jdbcType=VARCHAR},
+            </if>
+            <if test="paramJson != null">
+                param_json = #{paramJson,jdbcType=VARCHAR},
+            </if>
+            <if test="resultCode != null">
+                result_code = #{resultCode,jdbcType=VARCHAR},
+            </if>
+            <if test="resultMessage != null">
+                result_message = #{resultMessage,jdbcType=VARCHAR},
+            </if>
+            modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        </set>
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.dataobject.IpsTask">
+        UPDATE ips_task
+        SET customer_id = #{customerId,jdbcType=BIGINT},
+        dept_id = #{deptId,jdbcType=BIGINT},
+        request_id = #{requestId,jdbcType=VARCHAR},
+        task_type = #{taskType,jdbcType=VARCHAR},
+        state = #{state,jdbcType=VARCHAR},
+        result_json = #{resultJson,jdbcType=VARCHAR},
+        param_json = #{paramJson,jdbcType=VARCHAR},
+        result_code = #{resultCode,jdbcType=VARCHAR},
+        result_message = #{resultMessage,jdbcType=VARCHAR},
+        modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </update>
+
+    <select id="getById" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.dataobject.IpsTask">
+        SELECT
+        <include refid="BASE_All_COLUMN"/>
+        FROM ips_task
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </select>
+</mapper>

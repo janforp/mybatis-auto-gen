@@ -12,5 +12,7 @@ import lombok.experimental.UtilityClass;
 public class PdfGenerator {
 
     public static void pdf() {
+
     }
 }
+

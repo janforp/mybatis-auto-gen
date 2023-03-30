@@ -2,3 +2,7 @@
 #since 20200623
 
 GET http://127.0.0.1:8080/freeMark/pdf
+
+###
+
+GET http://127.0.0.1:8080/freeMark/exportPdf

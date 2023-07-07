@@ -463,6 +463,8 @@ public class SqlMapperMethodBuilder {
             return "TIMESTAMP";
         } else if (jdbcType.equals("MEDIUMTEXT")) {
             return "VARCHAR";
+        } else if (jdbcType.equals("TEXT")) {
+            return "VARCHAR";
         } else {
             return jdbcType;
         }

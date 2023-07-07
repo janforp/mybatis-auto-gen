@@ -34,7 +34,7 @@ public class MybatisCodeGenerateTest {
             //            "cr_question",
             //            "cr_version_used_info",
             //            "ips_declaration_record",
-            "ips_task"
+            "sg_trusted_login_task"
     );
 
     @Autowired(required = false)

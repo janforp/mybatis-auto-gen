@@ -24,7 +24,7 @@ public class EnvInfoConstants {
 
     public static final String SQLMAP_BASE_PATH = "src/main/resources/mapper/";
 
-    public static final String SCHEMA = "dev_hrtool";
+    public static final String SCHEMA = "test";
 
     public static final String FILE_CHARSET = "utf-8";
 

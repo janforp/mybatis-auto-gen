@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.IndexTestRecordDAO">
+
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.dataobject.IndexTestRecord">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="BASE_All_COLUMN">
+        id, name, gender, creator_id, modifier_id
+    </sql>
+
+    <insert id="insert" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
+        INSERT INTO index_test_record (
+        name, gender, creator_id,
+        modifier_id )
+        VALUES (
+        #{name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+        '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}' )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
+        INSERT INTO index_test_record
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="name != null">
+                name,
+            </if>
+            <if test="gender != null">
+                gender,
+            </if>
+            creator_id,
+            modifier_id,
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="gender != null">
+                #{gender,jdbcType=CHAR},
+            </if>
+            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+        </trim>
+    </insert>
+
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO index_test_record (
+        name, gender, creator_id,
+        modifier_id )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.name,jdbcType=VARCHAR}, #{item.gender,jdbcType=CHAR}, '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+            )
+        </foreach>
+    </insert>
+
+    <update id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
+        UPDATE index_test_record
+        SET is_delete = id,
+        modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </update>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
+        UPDATE index_test_record
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="gender != null">
+                gender = #{gender,jdbcType=CHAR},
+            </if>
+            modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        </set>
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
+        UPDATE index_test_record
+        SET name = #{name,jdbcType=VARCHAR},
+        gender = #{gender,jdbcType=CHAR},
+        modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </update>
+
+    <select id="getById" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
+        SELECT
+        <include refid="BASE_All_COLUMN"/>
+        FROM index_test_record
+        WHERE id = #{id,jdbcType=BIGINT}
+        AND is_delete = 0
+    </select>
+</mapper>

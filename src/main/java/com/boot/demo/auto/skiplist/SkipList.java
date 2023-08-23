@@ -6,6 +6,7 @@ import java.util.Random;
  * 跳跃表
  *
  * @author zhucj
+ * @see <a href="https://blog.csdn.net/lujianhao_ios/article/details/108372005>跳跃表</a>
  * @since 20230824
  */
 public class SkipList<T> {
@@ -25,7 +26,7 @@ public class SkipList<T> {
     /**
      * Random 类的实例对象 r 用来决定新添加的节点是否能够向更高一层的链表攀升。
      */
-    private Random r;
+    private final Random r;
 
     public SkipList() {
         // 创建 head 节点
@@ -54,7 +55,8 @@ public class SkipList<T> {
 
     public T put(Integer key, T value) {
 
-        SkipListEntry<T> p, q;
+        SkipListEntry<T> p;
+        SkipListEntry<T> q;
         int i = 0;
 
         // 查找适合插入的位子
@@ -88,7 +90,7 @@ public class SkipList<T> {
 
             // 新增和q指针指向的节点含有相同key值的节点对象
             // 这里需要注意的是除底层节点之外的节点对象是不需要value值的
-            SkipListEntry<T> z = new SkipListEntry<T>(key, null);
+            SkipListEntry<T> z = new SkipListEntry<>(key, null);
 
             z.left = p;
             z.right = p.right;
@@ -109,7 +111,8 @@ public class SkipList<T> {
     }
 
     public T remove(Integer key) {
-        SkipListEntry<T> p, q;
+        SkipListEntry<T> p;
+        SkipListEntry<T> q;
 
         p = findEntry(key);
 

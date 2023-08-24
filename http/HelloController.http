@@ -8,3 +8,12 @@ GET http://127.0.0.1:8080/beanpostprocessor/apply/sayHello
 ###
 
 GET http://127.0.0.1:8080/beanpostprocessor/apply/sayHi
+
+
+###
+
+GET http://127.0.0.1:8080/beanpostprocessor/apply/say_Hello
+
+###
+
+GET http://127.0.0.1:8080/beanpostprocessor/apply/say_Hi

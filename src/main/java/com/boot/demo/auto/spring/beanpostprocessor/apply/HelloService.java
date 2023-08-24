@@ -6,8 +6,10 @@ package com.boot.demo.auto.spring.beanpostprocessor.apply;
  * @author zhucj
  * @since 20230824
  */
-public interface IHelloService {
+@RoutingSwitch("hello.switch")
+public interface HelloService {
 
+    @RoutingSwitch("A")
     void sayHello();
 
     void sayHi();

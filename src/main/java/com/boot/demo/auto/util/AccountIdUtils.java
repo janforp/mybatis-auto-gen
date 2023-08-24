@@ -1,4 +1,4 @@
-package cn.com.servyou.hrbase.dao.util;
+package com.boot.demo.auto.util;
 
 import lombok.experimental.UtilityClass;
 

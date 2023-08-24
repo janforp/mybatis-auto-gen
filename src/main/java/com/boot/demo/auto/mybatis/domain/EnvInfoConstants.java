@@ -32,7 +32,7 @@ public class EnvInfoConstants {
 
     public static final String DAO_PACKAGE = "com.boot.demo.auto.dao";
 
-    public static final String ACCOUNT = "'${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'";
+    public static final String ACCOUNT = "'${@com.boot.demo.auto.util.AccountIdUtils@getAccountId()}'";
 
     public static final String NEW_LINE = "\n";
 

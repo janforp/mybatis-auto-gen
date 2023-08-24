@@ -17,8 +17,8 @@
         name, gender, creator_id,
         modifier_id )
         VALUES (
-        #{name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
-        '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}' )
+        #{name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}',
+        '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}' )
     </insert>
 
     <insert id="insertSelective" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
@@ -41,8 +41,8 @@
             <if test="gender != null">
                 #{gender,jdbcType=CHAR},
             </if>
-            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
-            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
+            '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}',
+            '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}',
         </trim>
     </insert>
 
@@ -53,8 +53,8 @@
         VALUES
         <foreach collection="list" item="item" index="index" separator=",">
             (
-            #{item.name,jdbcType=VARCHAR}, #{item.gender,jdbcType=CHAR}, '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}',
-            '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+            #{item.name,jdbcType=VARCHAR}, #{item.gender,jdbcType=CHAR}, '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}',
+            '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}'
             )
         </foreach>
     </insert>
@@ -62,7 +62,7 @@
     <update id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.dataobject.IndexTestRecord">
         UPDATE index_test_record
         SET is_delete = id,
-        modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        modifier_id = '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}'
         WHERE id = #{id,jdbcType=BIGINT}
         AND is_delete = 0
     </update>
@@ -76,7 +76,7 @@
             <if test="gender != null">
                 gender = #{gender,jdbcType=CHAR},
             </if>
-            modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+            modifier_id = '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}'
         </set>
         WHERE id = #{id,jdbcType=BIGINT}
         AND is_delete = 0
@@ -86,7 +86,7 @@
         UPDATE index_test_record
         SET name = #{name,jdbcType=VARCHAR},
         gender = #{gender,jdbcType=CHAR},
-        modifier_id = '${@cn.com.servyou.hrbase.dao.util.AccountIdUtils@getAccountId()}'
+        modifier_id = '${@com.boot.demo.auto.util.AccountIdUtils.getAccountId()}'
         WHERE id = #{id,jdbcType=BIGINT}
         AND is_delete = 0
     </update>

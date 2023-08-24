@@ -61,13 +61,13 @@ public class BeanLifeCycle implements
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        PrintUtils.println("postProcessBeforeInitialization" + " 名称 = " + beanName);
+        // PrintUtils.println("postProcessBeforeInitialization" + " 名称 = " + beanName);
         return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        PrintUtils.println("postProcessAfterInitialization" + " 名称 = " + beanName);
+        // PrintUtils.println("postProcessAfterInitialization" + " 名称 = " + beanName);
         return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
     }
 

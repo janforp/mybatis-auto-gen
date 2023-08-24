@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  * @author zhucj
  * @since 20230824
  */
-@Target({ ElementType.TYPE, ElementType.FIELD })
+@Target({ ElementType.TYPE, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component

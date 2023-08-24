@@ -57,6 +57,7 @@ public class RouteBeanPostProcessor implements BeanPostProcessor {
         return bean;
     }
 
+    @SuppressWarnings("all")
     private void doRouteInject(Field field, Object bean, Class<?> type) throws IllegalAccessException {
         field.setAccessible(true);
 

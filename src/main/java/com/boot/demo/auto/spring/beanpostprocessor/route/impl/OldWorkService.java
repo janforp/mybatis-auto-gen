@@ -16,7 +16,14 @@ import org.springframework.stereotype.Service;
 public class OldWorkService implements WorkService {
 
     @Override
-    public void work() {
+    public String work() {
         System.out.println("农业");
+        return "农业";
+    }
+
+    @Override
+    public String sleep() {
+        System.out.println("休息啦");
+        return "休息啦";
     }
 }

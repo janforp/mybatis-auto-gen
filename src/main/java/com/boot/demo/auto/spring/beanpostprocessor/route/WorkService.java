@@ -8,5 +8,7 @@ package com.boot.demo.auto.spring.beanpostprocessor.route;
  */
 public interface WorkService {
 
-    void work();
+    String work();
+
+    String sleep();
 }

@@ -5,7 +5,7 @@ import org.apache.commons.lang3.RandomUtils;
 import java.util.Random;
 
 /**
- * @author linglh
+ * @author 虎哥
  * @since 2.48.0
  */
 public class IdNumberFaker {

@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * 数据生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200528
  */
 public class Faker {

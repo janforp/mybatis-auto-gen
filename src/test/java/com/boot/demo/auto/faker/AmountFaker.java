@@ -8,7 +8,7 @@ import java.security.SecureRandom;
 /**
  * 企业id生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200528
  */
 public class AmountFaker {

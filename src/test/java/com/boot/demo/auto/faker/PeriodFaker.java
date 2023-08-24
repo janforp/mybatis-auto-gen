@@ -9,7 +9,7 @@ import java.time.temporal.ChronoUnit;
 /**
  * 所属期生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200723
  */
 public class PeriodFaker {

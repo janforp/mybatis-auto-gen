@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * 姓名生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200528
  */
 public class NameFaker {

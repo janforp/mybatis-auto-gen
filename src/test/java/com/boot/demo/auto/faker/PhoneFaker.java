@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * 手机号码生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200528
  */
 public class PhoneFaker {

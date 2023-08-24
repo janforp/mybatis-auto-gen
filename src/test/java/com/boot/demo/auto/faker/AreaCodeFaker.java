@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * 身份证号码生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200528
  */
 public class AreaCodeFaker {

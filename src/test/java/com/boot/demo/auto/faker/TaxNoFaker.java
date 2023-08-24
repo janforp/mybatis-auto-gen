@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 税号生成器
  *
- * @author linglh
+ * @author 虎哥
  * @since 20200528
  */
 public class TaxNoFaker {
